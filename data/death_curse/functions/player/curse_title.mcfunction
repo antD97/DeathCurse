@@ -1,3 +1,6 @@
+# Copyright © 2022 antD97
+# Licensed under the MIT License https://antD.mit-license.org/
+
 # displays the death curse level as a title to the executor
 
 # titles

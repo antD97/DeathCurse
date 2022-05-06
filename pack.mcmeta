@@ -1,6 +1,6 @@
 {
     "pack": {
         "pack_format": 9,
-        "description": {"text":"Respawns no longer taken for granted","color":"dark_red"}
+        "description": {"text":"Death penalties","color":"dark_red"}
     }
 }

@@ -1,3 +1,6 @@
+# Copyright © 2022 antD97
+# Licensed under the MIT License https://antD.mit-license.org/
+
 # 10t (0.5s) timer
 schedule function death_curse:timer/10t 10t
 

@@ -2,22 +2,36 @@
 
 <!-- [![GitHub release](https://img.shields.io/github/downloads/antD97/SDPS/v1.0/total)](https://github.com/antD97/SmiteDPS/releases/tag/v1.0) -->
 
-<!-- From the book: Respawns no longer taken for granted. -->
-
-<!-- bringing someone back to life "comes with a price"/"has a cost"/"takes a lot of energy/ takes a lot of work" -->
+<!-- bringing someone back to life "comes with a price"/"has a cost"/"takes a lot of energy/takes a lot of work" -->
 <!-- you will find "yourself"/"life to be"/"things"/"the world" -->
-Gone are the days of respawning for free. Don't you know bringing someone back to life takes a lot
-of work? It's about time you learn. For every subsequent life you live, you wil find life to be
-increasingly *unstable*. Enjoy.  
-*increasingly* unstable. Enjoy.
+Gone are the days of resurrecting without consequence. Don't you know bringing someone back to life
+comes with a price? It's about time you learn. For every subsequent life you live, you wil find life
+to be increasingly *unstable*. Enjoy.
 <!-- or *increasingly* unstable/*increasingly unstable* -->
 
 Death Curse is a Minecraft datapack that applies a curse to players that respawn. For every respawn,
-the curse gets worse.
+the curse worsens.
 
 Curse difficulty balance is currently a work in progress and everything is subject to change.
 
 <!-- You can find the download [here](https://github.com/antD97/SmiteDPS/releases/tag/v1.0). -->
+
+# Player Triggers
+
+`/trigger death_curse_intro`  
+Causes the introduction message to reprint for the player in case they've missed it the first time.
+
+`/trigger death_curse_give_book`
+Provides the player with a Death Curse explanation book.
+
+# Operator Functions
+
+`/function death_curse:op/clear_all`  
+Removes all scoreboard objectives, scheduled functions, and applied tags. The next time the datapack
+is reloaded, the datapack will run like it did the first time.
+
+`/function death_curse:op/print_debug`  
+Prints common scoreboard values used for debugging.
 
 # Curse Relief
 **WIP**  
