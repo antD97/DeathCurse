@@ -4,7 +4,7 @@
 # applies all the level 2 2m effects to the executor
 
 # 50%:
-scoreboard players set global death_curse_arg 2
+scoreboard players set global death_curse_arg1 2
 function death_curse:util/random
 
 # nausea2

@@ -4,7 +4,7 @@
 # cloaks 1 hostile mob within 30 blocks of the executor (be sure to be positioned as the exectuor)
 
 # argument used to identify which player is trying to apply the curse
-scoreboard players operation global death_curse_arg = @s death_curse_id
+scoreboard players operation global death_curse_arg1 = @s death_curse_id
 # use to count the number cursed by this player
 scoreboard players set global death_curse_result 0
 
@@ -49,6 +49,7 @@ execute if score global death_curse_result matches 0 as @e[type=minecraft:spider
 execute if score global death_curse_result matches 0 as @e[type=minecraft:zombified_piglin] run function death_curse:curse/effect/helper/curse_leak1_mark_hostile
 
 # cloak a random hostile mob
+scoreboard players operation global death_curse_arg2 = @s death_curse_level
 execute if score global death_curse_result matches 0 as @e[scores={death_curse_hostile=1},sort=random,limit=1] run function death_curse:hostile_mob/cloak1
 
 # remove hostile mark

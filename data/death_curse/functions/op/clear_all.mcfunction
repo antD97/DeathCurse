@@ -19,6 +19,11 @@ scoreboard objectives remove death_curse_effect_offset2
 scoreboard objectives remove death_curse_effect_offset3
 scoreboard objectives remove death_curse_effect_offset4
 
+scoreboard objectives remove death_curse_increase
+scoreboard objectives remove death_curse_increase_end
+scoreboard objectives remove death_curse_decrease
+scoreboard objectives remove death_curse_decrease_end
+
 scoreboard objectives remove death_curse_fatigue
 scoreboard objectives remove death_curse_fatigue_end
 
@@ -26,9 +31,13 @@ scoreboard objectives remove death_curse_hostile
 scoreboard objectives remove death_curse_cloak1_id
 scoreboard objectives remove death_curse_cloak2_id
 scoreboard objectives remove death_curse_cloak_end
+scoreboard objectives remove death_curse_cloak_level
+scoreboard objectives remove death_curse_cloaking
+scoreboard objectives remove death_curse_cloaking_end
 
+scoreboard objectives remove death_curse_arg1
+scoreboard objectives remove death_curse_arg2
 scoreboard objectives remove death_curse_result
-scoreboard objectives remove death_curse_arg
 
 # clear all scheduled functions
 schedule clear death_curse:timer/2t

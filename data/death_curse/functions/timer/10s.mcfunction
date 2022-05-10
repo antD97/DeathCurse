@@ -5,4 +5,5 @@
 schedule function death_curse:timer/10s 10s
 
 # intro message
+scoreboard players add @a death_curse_introduced 0
 execute as @a[scores={death_curse_introduced=0}] run function death_curse:player/intro

@@ -28,7 +28,7 @@ tellraw @s ["",{"text":"global effect timer: "},{"score":{"name":"global","objec
 
 # global arg:
 # global result:
-tellraw @s ["",{"text":"global arg: "},{"score":{"name":"global","objective":"death_curse_arg"}},{"text":"\nglobal result: "},{"score":{"name":"global","objective":"death_curse_result"}},{"text":"\n "}]
+tellraw @s ["",{"text":"global arg: "},{"score":{"name":"global","objective":"death_curse_arg1"}},{"text":"\nglobal result: "},{"score":{"name":"global","objective":"death_curse_result"}},{"text":"\n "}]
 
 # ----- DEBUG END -----
 tellraw @s {"text":"----- DEBUG END -----"}

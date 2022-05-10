@@ -3,5 +3,14 @@
 
 # creates particle effects for player executors
 
-# curse level 2 #990000 red
-execute as @s[scores={death_curse_fatigue=1}] positioned as @s run particle minecraft:entity_effect ~ ~ ~ 153 0 0 255 0
+# curse increase
+execute as @s[scores={death_curse_increase=1}] positioned as @s run function death_curse:particle/curse_increase
+
+# curse decrease
+execute as @s[scores={death_curse_decrease=1}] positioned as @s run function death_curse:particle/curse_decrease
+
+# fatigue
+execute as @s[scores={death_curse_fatigue=1}] positioned as @s run function death_curse:particle/fatigue
+
+# cloaking
+execute as @s[scores={death_curse_cloaking=1}] positioned as @s run function death_curse:particle/cloaking
