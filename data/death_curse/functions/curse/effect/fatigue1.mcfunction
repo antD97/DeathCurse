@@ -13,7 +13,7 @@ effect give @s minecraft:weakness 5 0 true
 effect give @s minecraft:mining_fatigue 5 0 true
 effect give @s minecraft:slowness 5 0 true
 
-playsound minecraft:ambient.basalt_deltas.additions ambient @s ~ ~10000 ~ 0 1 1
+playsound minecraft:ambient.basalt_deltas.additions ambient @s ~ ~10000 ~ 10000
 
 # enable particle effect
 scoreboard players set @s death_curse_fatigue 1

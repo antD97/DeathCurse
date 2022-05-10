@@ -7,4 +7,4 @@
 
 effect give @s minecraft:nausea 5 0 true
 
-playsound minecraft:ambient.crimson_forest.additions ambient @s ~ ~10000 ~ 0 1 1
+playsound minecraft:ambient.crimson_forest.additions ambient @s ~ ~10000 ~ 10000

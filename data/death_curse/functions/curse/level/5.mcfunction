@@ -25,7 +25,7 @@ scoreboard players operation global death_curse_result += @s death_curse_effect_
 scoreboard players set global death_curse_arg1 180
 scoreboard players operation global death_curse_result %= global death_curse_arg1
 
-execute if score global death_curse_result matches 0 positioned as @s run function death_curse:curse/effect/poison1
+execute if score global death_curse_result matches 0 run function death_curse:curse/effect/poison1
 
 # 5m ((effect timer + offset) % 300): curse leak
 scoreboard players operation global death_curse_result = global death_curse_effect_timer

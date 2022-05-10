@@ -4,15 +4,16 @@
 # arguments:
 #   global death_curse_arg1 score: the id of the player applying the cloak
 
-# ensrue scores have a value
+# ensure scores have a value
 scoreboard players add @s death_curse_cloak1_id 0
 scoreboard players add @s death_curse_cloak2_id 0
 
-# apply tag if not already cloak1'd
+# apply mark if not already cloak1'd
 scoreboard players set @s[scores={death_curse_cloak1_id=0},distance=..30] death_curse_hostile 1
 
-# remove tag if already cloak2'd
+# remove mark if already cloak2'd
 scoreboard players set @s[scores={death_curse_cloak2_id=1..},distance=..30] death_curse_hostile 0
 
 # add to cloaked count
 execute if score @s death_curse_cloak1_id = global death_curse_arg1 run scoreboard players add global death_curse_result 1
+execute if score @s death_curse_cloak2_id = global death_curse_arg1 run scoreboard players add global death_curse_result 1
