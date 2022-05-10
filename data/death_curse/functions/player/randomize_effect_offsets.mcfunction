@@ -7,19 +7,19 @@
 # offset 1
 scoreboard players set global death_curse_arg1 1800
 function death_curse:util/random
-scoreboard players operation @s death_curse_effect_offset1 = global death_curse_result
+scoreboard players operation @s death_curse_effect_offset1 = global death_curse_result1
 
 # offset 2
 scoreboard players set global death_curse_arg1 1800
 function death_curse:util/random
-scoreboard players operation @s death_curse_effect_offset2 = global death_curse_result
+scoreboard players operation @s death_curse_effect_offset2 = global death_curse_result1
 
 # offset 3
 scoreboard players set global death_curse_arg1 1800
 function death_curse:util/random
-scoreboard players operation @s death_curse_effect_offset3 = global death_curse_result
+scoreboard players operation @s death_curse_effect_offset3 = global death_curse_result1
 
 # offset 4
 scoreboard players set global death_curse_arg1 1800
 function death_curse:util/random
-scoreboard players operation @s death_curse_effect_offset4 = global death_curse_result
+scoreboard players operation @s death_curse_effect_offset4 = global death_curse_result1

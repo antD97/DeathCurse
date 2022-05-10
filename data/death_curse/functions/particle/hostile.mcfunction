@@ -6,3 +6,6 @@
 # cloak
 execute as @s[scores={death_curse_cloak1_id=1}] run function death_curse:particle/cloak
 execute as @s[scores={death_curse_cloak2_id=1}] run function death_curse:particle/cloak
+
+# mob aggression
+execute as @s[scores={death_curse_angry=1}] run function death_curse:particle/angry

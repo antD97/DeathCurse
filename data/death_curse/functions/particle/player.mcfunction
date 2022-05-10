@@ -23,3 +23,6 @@ execute as @s[scores={death_curse_poison=1}] positioned as @s run function death
 
 # fatigue 3
 execute as @s[scores={death_curse_fatigue3=1}] positioned as @s run function death_curse:particle/fatigue3
+
+# mob aggression
+execute as @s[scores={death_curse_mob_aggression=2}] positioned as @s run particle minecraft:smoke ~ ~0.45 ~ 0.15 0.225 0.15 0 1

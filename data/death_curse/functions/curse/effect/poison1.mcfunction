@@ -8,7 +8,7 @@ scoreboard players set global death_curse_arg1 4
 function death_curse:util/random
 
 # 75%: 2s poison
-execute if score global death_curse_result matches 0..2 run effect give @s minecraft:poison 2 0 true
+execute if score global death_curse_result1 matches 0..2 run effect give @s minecraft:poison 2 0 true
 
 # 25%: 3s poison
-execute if score global death_curse_result matches 3 run function death_curse:curse/effect/helper/poison1_heavy
+execute if score global death_curse_result1 matches 3 run function death_curse:curse/effect/helper/poison1_heavy

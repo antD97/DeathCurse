@@ -44,9 +44,14 @@ scoreboard objectives remove death_curse_poison_end
 scoreboard objectives remove death_curse_fatigue3
 scoreboard objectives remove death_curse_fatigue3_end
 
+scoreboard objectives remove death_curse_mob_aggression
+scoreboard objectives remove death_curse_angry
+scoreboard objectives remove death_curse_angry_end
+
 scoreboard objectives remove death_curse_arg1
 scoreboard objectives remove death_curse_arg2
-scoreboard objectives remove death_curse_result
+scoreboard objectives remove death_curse_result1
+scoreboard objectives remove death_curse_result2
 
 # clear all scheduled functions
 schedule clear death_curse:timer/2t

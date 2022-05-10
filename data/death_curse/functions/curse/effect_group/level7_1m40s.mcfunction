@@ -8,10 +8,10 @@ scoreboard players set global death_curse_arg1 4
 function death_curse:util/random
 
 # 50%: nausea2
-execute if score global death_curse_result matches 0..1 run function death_curse:curse/effect/nausea2
+execute if score global death_curse_result1 matches 0..1 run function death_curse:curse/effect/nausea2
 
 # 25%: fatigue2
-execute if score global death_curse_result matches 2 run function death_curse:curse/effect/fatigue2
+execute if score global death_curse_result1 matches 2 run function death_curse:curse/effect/fatigue2
 
 # 25%: fatigue3
-execute if score global death_curse_result matches 3 run function death_curse:curse/effect/fatigue3
+execute if score global death_curse_result1 matches 3 run function death_curse:curse/effect/fatigue3

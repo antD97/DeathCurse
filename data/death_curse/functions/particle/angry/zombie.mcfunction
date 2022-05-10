@@ -7,6 +7,6 @@
 execute store result score global death_curse_result1 run data get entity @s IsBaby
 
 # not baby
-execute if score global death_curse_result1 matches 0 run particle minecraft:squid_ink ~ ~0.95 ~ 0 0.475 0 0 3
+execute if score global death_curse_result1 matches 0 run particle minecraft:smoke ~ ~0.95 ~ 0.15 0.475 0.15 0 3
 # baby
-execute if score global death_curse_result1 matches 1 run particle minecraft:squid_ink ~ ~0.475 ~ 0 0.2375 0 0 2
+execute if score global death_curse_result1 matches 1 run particle minecraft:smoke ~ ~0.475 ~ 0.075 0.2375 0.075 0 2

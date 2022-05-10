@@ -11,4 +11,4 @@ scoreboard players add @s death_curse_cloak2_id 0
 scoreboard players set @s[scores={death_curse_cloak2_id=0},distance=..30] death_curse_hostile 1
 
 # add to cloaked count
-execute if score @s death_curse_cloak2_id = global death_curse_arg1 run scoreboard players add global death_curse_result 1
+execute if score @s death_curse_cloak2_id = global death_curse_arg1 run scoreboard players add global death_curse_result1 1

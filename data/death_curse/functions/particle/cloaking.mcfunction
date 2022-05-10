@@ -21,4 +21,3 @@ execute as @s[scores={death_curse_level=8}] run particle minecraft:entity_effect
 execute as @s[scores={death_curse_level=9}] run particle minecraft:entity_effect ~ ~ ~ 34 0 0 255 0
 # curse level 10+ #000000 red
 execute as @s[scores={death_curse_level=10..}] run particle minecraft:entity_effect ~ ~ ~ 1 0 0 255 0
-

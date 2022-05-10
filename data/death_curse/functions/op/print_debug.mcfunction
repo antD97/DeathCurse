@@ -26,9 +26,5 @@ tellraw @s ["",{"text":"curse intro: "},{"score":{"name":"@s","objective":"death
 # effect offset4:
 tellraw @s ["",{"text":"global effect timer: "},{"score":{"name":"global","objective":"death_curse_effect_timer"}},{"text":"\neffect offset1: "},{"score":{"name":"@s","objective":"death_curse_effect_offset1"}},{"text":"\neffect offset2: "},{"score":{"name":"@s","objective":"death_curse_effect_offset2"}},{"text":"\neffect offset3: "},{"score":{"name":"@s","objective":"death_curse_effect_offset3"}},{"text":"\neffect offset4: "},{"score":{"name":"@s","objective":"death_curse_effect_offset4"}},{"text":"\n "}]
 
-# global arg:
-# global result:
-tellraw @s ["",{"text":"global arg: "},{"score":{"name":"global","objective":"death_curse_arg1"}},{"text":"\nglobal result: "},{"score":{"name":"global","objective":"death_curse_result"}},{"text":"\n "}]
-
 # ----- DEBUG END -----
 tellraw @s {"text":"----- DEBUG END -----"}

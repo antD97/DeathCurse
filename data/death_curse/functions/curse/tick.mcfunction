@@ -14,3 +14,6 @@ execute as @a[scores={death_curse_level=7}] run function death_curse:curse/level
 execute as @a[scores={death_curse_level=8}] run function death_curse:curse/level/8
 execute as @a[scores={death_curse_level=9}] run function death_curse:curse/level/9
 execute as @a[scores={death_curse_level=10..}] run function death_curse:curse/level/10
+
+# slow mob aggression particle effect
+execute as @a[scores={death_curse_mob_aggression=1}] run execute positioned as @s run particle minecraft:smoke ~ ~0.45 ~ 0.15 0.225 0.15 0 3
