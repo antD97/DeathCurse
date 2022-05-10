@@ -6,6 +6,6 @@
 # result:
 #   global death_curse_result score: a random number between 0 and death_curse_arg - 1
 summon marker ~ ~ ~ {Tags:["random_uuid"]}
-execute store result score death_curse death_curse_result run data get entity @e[type=marker,tag=random_uuid,limit=1] UUID[0] 1
-scoreboard players operation death_curse death_curse_result %= death_curse death_curse_arg
+execute store result score global death_curse_result run data get entity @e[type=marker,tag=random_uuid,limit=1] UUID[0] 1
+scoreboard players operation global death_curse_result %= global death_curse_arg
 kill @e[type=marker,tag=random_uuid]

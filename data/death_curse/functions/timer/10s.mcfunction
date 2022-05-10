@@ -5,4 +5,4 @@
 schedule function death_curse:timer/10s 10s
 
 # intro message
-execute as @a[tag=!death_curse_introduced] run function death_curse:player/intro
+execute as @a[scores={death_curse_introduced=0}] run function death_curse:player/intro

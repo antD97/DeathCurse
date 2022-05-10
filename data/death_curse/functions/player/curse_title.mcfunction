@@ -13,7 +13,7 @@ title @s[scores={death_curse_level=2}] title {"text":"Death Curse II","color":"#
 title @s[scores={death_curse_level=2}] subtitle {"text":"-\u2665 +fatigue","color":"#990000"}
 
 title @s[scores={death_curse_level=3}] title {"text":"Death Curse III","color":"#880000"}
-title @s[scores={death_curse_level=3}] subtitle {"text":"+deadly odor","color":"#880000"}
+title @s[scores={death_curse_level=3}] subtitle {"text":"+curse leak","color":"#880000"}
 
 title @s[scores={death_curse_level=4}] title {"text":"Death Curse IV","color":"#770000"}
 title @s[scores={death_curse_level=4}] subtitle {"text":"-\u2665 +nausea +fatigue","color":"#770000"}
@@ -22,7 +22,7 @@ title @s[scores={death_curse_level=5}] title {"text":"Death Curse V","color":"#6
 title @s[scores={death_curse_level=5}] subtitle {"text":"+poison","color":"#660000"}
 
 title @s[scores={death_curse_level=6}] title ["",{"text":"De","color":"#550000"},{"text":"a","obfuscated":true,"color":"#550000"},{"text":"th Curse VI","color":"#550000"}]
-title @s[scores={death_curse_level=6}] subtitle {"text":"-\u2665 +deadly odor","color":"#550000"}
+title @s[scores={death_curse_level=6}] subtitle {"text":"-\u2665 +curse leak","color":"#550000"}
 
 title @s[scores={death_curse_level=7}] title ["",{"text":"D","obfuscated":true,"color":"#440000"},{"text":"ea","color":"#440000"},{"text":"t","obfuscated":true,"color":"#440000"},{"text":"h Cur","color":"#440000"},{"text":"s","obfuscated":true,"color":"#440000"},{"text":"e VII","color":"#440000"}]
 title @s[scores={death_curse_level=7}] subtitle {"text":"+fatigue","color":"#440000"}

@@ -8,7 +8,7 @@ schedule function death_curse:timer/10t 10t
 execute as @a[scores={death_curse_time_alive=1..10, death_curse_level=1..}] run function death_curse:player/curse_title
 
 # intro trigger
-execute as @a[scores={death_curse_intro=1..}] run function death_curse:player/print_intro
+execute as @a[scores={death_curse_intro=1..}] run function death_curse:player/intro
 scoreboard players enable @a death_curse_intro
 scoreboard players set @a death_curse_intro 0
 
