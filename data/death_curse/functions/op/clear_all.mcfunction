@@ -24,8 +24,8 @@ scoreboard objectives remove death_curse_increase_end
 scoreboard objectives remove death_curse_decrease
 scoreboard objectives remove death_curse_decrease_end
 
-scoreboard objectives remove death_curse_fatigue
-scoreboard objectives remove death_curse_fatigue_end
+scoreboard objectives remove death_curse_fatigue1
+scoreboard objectives remove death_curse_fatigue1_end
 
 scoreboard objectives remove death_curse_hostile
 scoreboard objectives remove death_curse_cloak1_id
@@ -35,8 +35,14 @@ scoreboard objectives remove death_curse_cloak_level
 scoreboard objectives remove death_curse_cloaking
 scoreboard objectives remove death_curse_cloaking_end
 
+scoreboard objectives remove death_curse_fatigue2
+scoreboard objectives remove death_curse_fatigue2_end
+
 scoreboard objectives remove death_curse_poison
 scoreboard objectives remove death_curse_poison_end
+
+scoreboard objectives remove death_curse_fatigue3
+scoreboard objectives remove death_curse_fatigue3_end
 
 scoreboard objectives remove death_curse_arg1
 scoreboard objectives remove death_curse_arg2

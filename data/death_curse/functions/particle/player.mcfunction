@@ -9,11 +9,17 @@ execute as @s[scores={death_curse_increase=1}] positioned as @s run function dea
 # curse decrease
 execute as @s[scores={death_curse_decrease=1}] positioned as @s run function death_curse:particle/curse_decrease
 
-# fatigue
-execute as @s[scores={death_curse_fatigue=1}] positioned as @s run function death_curse:particle/fatigue
+# fatigue 1
+execute as @s[scores={death_curse_fatigue1=1}] positioned as @s run function death_curse:particle/fatigue1
 
 # cloaking
 execute as @s[scores={death_curse_cloaking=1}] positioned as @s run function death_curse:particle/cloaking
 
+# fatigue 2
+execute as @s[scores={death_curse_fatigue2=1}] positioned as @s run function death_curse:particle/fatigue2
+
 # poison
 execute as @s[scores={death_curse_poison=1}] positioned as @s run function death_curse:particle/poison
+
+# fatigue 3
+execute as @s[scores={death_curse_fatigue3=1}] positioned as @s run function death_curse:particle/fatigue3

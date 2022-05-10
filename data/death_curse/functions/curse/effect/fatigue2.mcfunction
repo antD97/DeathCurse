@@ -3,8 +3,8 @@
 
 # applies to the executor:
 # 6s nausea
-# 5s weakness
-# 5s mining fatigue
+# 5s weakness II
+# 5s mining fatigue II
 # 5s slowness
 # plays medium sound
 
@@ -16,7 +16,7 @@ effect give @s minecraft:slowness 5 0 true
 playsound minecraft:ambient.basalt_deltas.additions ambient @s ~ ~10000 ~ 10000
 
 # enable particle effect
-scoreboard players set @s death_curse_fatigue 1
+scoreboard players set @s death_curse_fatigue2 1
 # set particle effect end time
-scoreboard players operation @s death_curse_fatigue_end = global death_curse_effect_timer
-scoreboard players add @s death_curse_fatigue_end 5
+scoreboard players operation @s death_curse_fatigue2_end = global death_curse_effect_timer
+scoreboard players add @s death_curse_fatigue2_end 5

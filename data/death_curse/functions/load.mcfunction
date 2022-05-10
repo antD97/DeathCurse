@@ -38,9 +38,9 @@ scoreboard objectives add death_curse_decrease dummy
 scoreboard objectives add death_curse_decrease_end dummy
 
 # used to mark players with fatigue particle effect
-scoreboard objectives add death_curse_fatigue dummy
+scoreboard objectives add death_curse_fatigue1 dummy
 # used to keep track of fatigue particle duration
-scoreboard objectives add death_curse_fatigue_end dummy
+scoreboard objectives add death_curse_fatigue1_end dummy
 
 # used to mark hostile mobs
 scoreboard objectives add death_curse_hostile dummy
@@ -57,10 +57,20 @@ scoreboard objectives add death_curse_cloaking dummy
 # used to keep track of cloaking particle duration
 scoreboard objectives add death_curse_cloaking_end dummy
 
+# used to mark players with intense fatigue particle effect
+scoreboard objectives add death_curse_fatigue2 dummy
+# used to keep track of intense fatigue particle duration
+scoreboard objectives add death_curse_fatigue2_end dummy
+
 # used to mark players with poison particle effect
 scoreboard objectives add death_curse_poison dummy
 # used to keep track of poison particle duration
 scoreboard objectives add death_curse_poison_end dummy
+
+# used to mark players with intense fatigue particle effect
+scoreboard objectives add death_curse_fatigue3 dummy
+# used to keep track of intense fatigue particle duration
+scoreboard objectives add death_curse_fatigue3_end dummy
 
 # temporary values used for function arguments or arithmetic
 scoreboard objectives add death_curse_arg1 dummy
