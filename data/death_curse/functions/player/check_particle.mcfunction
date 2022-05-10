@@ -14,3 +14,6 @@ execute if score @s death_curse_fatigue matches 1.. run function death_curse:pla
 
 # check cloaking effect scores
 execute if score @s death_curse_cloaking matches 1.. run function death_curse:player/check/cloaking
+
+# check poison effect scores
+execute if score @s death_curse_poison matches 1.. run function death_curse:player/check/poison

@@ -14,3 +14,6 @@ execute as @s[scores={death_curse_fatigue=1}] positioned as @s run function deat
 
 # cloaking
 execute as @s[scores={death_curse_cloaking=1}] positioned as @s run function death_curse:particle/cloaking
+
+# poison
+execute as @s[scores={death_curse_poison=1}] positioned as @s run function death_curse:particle/poison

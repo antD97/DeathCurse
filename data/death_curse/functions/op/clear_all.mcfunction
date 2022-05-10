@@ -35,6 +35,9 @@ scoreboard objectives remove death_curse_cloak_level
 scoreboard objectives remove death_curse_cloaking
 scoreboard objectives remove death_curse_cloaking_end
 
+scoreboard objectives remove death_curse_poison
+scoreboard objectives remove death_curse_poison_end
+
 scoreboard objectives remove death_curse_arg1
 scoreboard objectives remove death_curse_arg2
 scoreboard objectives remove death_curse_result

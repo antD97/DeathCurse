@@ -57,6 +57,11 @@ scoreboard objectives add death_curse_cloaking dummy
 # used to keep track of cloaking particle duration
 scoreboard objectives add death_curse_cloaking_end dummy
 
+# used to mark players with poison particle effect
+scoreboard objectives add death_curse_poison dummy
+# used to keep track of poison particle duration
+scoreboard objectives add death_curse_poison_end dummy
+
 # temporary values used for function arguments or arithmetic
 scoreboard objectives add death_curse_arg1 dummy
 scoreboard objectives add death_curse_arg2 dummy
