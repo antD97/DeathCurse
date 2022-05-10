@@ -3,7 +3,7 @@
 
 # applies level 4 curse effects
 
-# 30s ((effect timer + offset1) % 30): nausea1
+# 30s ((effect timer + offset1) % 30): nausea 1
 scoreboard players operation global death_curse_result = global death_curse_effect_timer
 scoreboard players operation global death_curse_result += @s death_curse_effect_offset1
 scoreboard players set global death_curse_arg1 30

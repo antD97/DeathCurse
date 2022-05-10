@@ -3,7 +3,7 @@
 
 # applies level 5 curse effects
 
-# 30s ((effect timer + offset1) % 30): nausea1
+# 30s ((effect timer + offset1) % 30): nausea 1
 scoreboard players operation global death_curse_result = global death_curse_effect_timer
 scoreboard players operation global death_curse_result += @s death_curse_effect_offset1
 scoreboard players set global death_curse_arg1 30
@@ -19,7 +19,7 @@ scoreboard players operation global death_curse_result %= global death_curse_arg
 
 execute if score global death_curse_result matches 0 run function death_curse:curse/effect_group/level4_1m40s
 
-# 3m ((effect timer + offset3) % 180): poison
+# 3m ((effect timer + offset3) % 180): poison 1
 scoreboard players operation global death_curse_result = global death_curse_effect_timer
 scoreboard players operation global death_curse_result += @s death_curse_effect_offset3
 scoreboard players set global death_curse_arg1 180
