@@ -5,7 +5,7 @@
 effect give @s minecraft:poison 3 0 true
 
 # witch laughter
-execute positioned as @s run playsound minecraft:entity.witch.celebrate ambient @s ~ ~10000 ~ 10000
+execute positioned as @s run playsound minecraft:entity.witch.celebrate ambient @s ~ ~1000 ~ 100000
 
 # enable particle effect
 scoreboard players set @s death_curse_poison 1

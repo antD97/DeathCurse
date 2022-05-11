@@ -48,6 +48,12 @@ scoreboard objectives remove death_curse_mob_aggression
 scoreboard objectives remove death_curse_angry
 scoreboard objectives remove death_curse_angry_end
 
+scoreboard objectives remove death_curse_feared
+scoreboard objectives remove death_curse_feared_end
+scoreboard objectives remove death_curse_feared_init
+scoreboard objectives remove death_curse_next_fast_beat
+scoreboard objectives remove death_curse_next_slow_beat
+
 scoreboard objectives remove death_curse_arg1
 scoreboard objectives remove death_curse_arg2
 scoreboard objectives remove death_curse_result1

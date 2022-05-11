@@ -26,9 +26,9 @@ execute as @s[scores={death_curse_level=10..}] run attribute @s minecraft:generi
 effect give @s minecraft:instant_health
 
 # sounds
-execute as @s[scores={death_curse_level=1..3}] run playsound minecraft:ambient.crimson_forest.mood ambient @s ~ ~10000 ~ 10000
-execute as @s[scores={death_curse_level=4..6}] run playsound minecraft:ambient.soul_sand_valley.mood ambient @s ~ ~10000 ~ 10000
-execute as @s[scores={death_curse_level=7..}] run playsound minecraft:ambient.cave ambient @s ~ ~10000 ~ 10000
+execute as @s[scores={death_curse_level=1..3}] run playsound minecraft:ambient.crimson_forest.mood ambient @s ~ ~1000 ~ 100000
+execute as @s[scores={death_curse_level=4..6}] run playsound minecraft:ambient.soul_sand_valley.mood ambient @s ~ ~1000 ~ 100000
+execute as @s[scores={death_curse_level=7..}] run playsound minecraft:ambient.cave ambient @s ~ ~1000 ~ 100000
 
 # particles
 scoreboard players set @s death_curse_increase 1

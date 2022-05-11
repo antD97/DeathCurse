@@ -56,7 +56,7 @@ Effects:
 - every 45s: 4s nausea
 - every 2m:
   - **50%: 5s nausea**
-  - **50%: 6s nausea, 5s weakness, 5s mining fatigue, & 5s slowness**
+  - **50%: 6s nausea, 5s mining fatigue, & 5s slowness**
 
 ## Death Curse III
 <!-- "curse leak" name subject to change -->
@@ -66,7 +66,7 @@ Effects:
 - every 45s: 4s nausea
 - every 2m:
   - 50%: 5s nausea
-  - 50%: 6s nausea, 5s weakness, 5s mining fatigue, & 5s slowness
+  - 50%: 6s nausea, 5s mining fatigue, & 5s slowness
 <!-- need to check balance-->
 - **every 5m: 1 hostile mob within 30 blocks of the player will be cloaked for 20m (max 1 at a time)**
 
@@ -77,7 +77,7 @@ Effects:
 - **every 30s:** 4s nausea
 - **every 1m40s:**
   - 50%: 5s nausea
-  - 50%: 6s nausea, 5s **weakness II**, 5s **mining fatigue II**, & 5s slowness
+  - 50%: 6s nausea, **5s weakness**, 5s **mining fatigue II**, & 5s slowness
 - every 5m: 1 hostile mob within 30 blocks of the player will be cloaked for 20m (max 1 at a time)
 
 ## Death Curse V
@@ -87,7 +87,7 @@ Effects:
 - every 30s: 4s nausea
 - every 1m40s:
   - 50%: 5s nausea
-  - 50%: 6s nausea, 5s weakness II, 5s mining fatigue II, & 5s slowness
+  - 50%: 6s nausea, 5s weakness, 5s mining fatigue II, & 5s slowness
 <!-- need to check balance -->
 - **every 3m:**
   - **75%: 2s poison (1/2♥)**
@@ -101,7 +101,7 @@ Effects:
 - every 30s: 4s nausea
 - every 1m40s:
   - 50%: 5s nausea
-  - 50%: 6s nausea, 5s weakness II, 5s mining fatigue II, & 5s slowness
+  - 50%: 6s nausea, 5s weakness, 5s mining fatigue II, & 5s slowness
 - every 3m:
   - 75%: 2s poison (1/2♥)
   - 25%: 3s poison (1♥)
@@ -115,8 +115,8 @@ Effects:
 - every 30s: 4s nausea
 - every 1m40s:
   - 50%: 5s nausea
-  - **25%:** 6s nausea, 5s weakness II, 5s mining fatigue II, & 5s slowness
-  - **25%: 7s nausea, 5s weakness II, 5s mining fatigue II, 5s slowness II, 3s blindness, & 10s hunger X (~1.5🍗)**
+  - **25%:** 6s nausea, 5s weakness, 5s mining fatigue II, & 5s slowness
+  - **25%: 7s nausea, 5s weakness, 5s mining fatigue II, 5s slowness II, 3s blindness, & 10s hunger X (~1.5🍗)**
 - every 3m:
   - 75%: 2s poison (1/2♥)
   - 25%: 3s poison (1♥)
@@ -129,8 +129,8 @@ Effects:
 - every 30s: 4s nausea
 - every 1m40s:
   - 50%: 5s nausea
-  - 25%: 6s nausea, 5s weakness II, 5s mining fatigue II, & 5s slowness
-  - 25%: 7s nausea, 5s weakness II, 5s mining fatigue II, 5s slowness II, 3s blindness, & 10s hunger X (~1.5🍗)
+  - 25%: 6s nausea, 5s weakness, 5s mining fatigue II, & 5s slowness
+  - 25%: 7s nausea, 5s weakness, 5s mining fatigue II, 5s slowness II, 3s blindness, & 10s hunger X (~1.5🍗)
 - **every 3m:**
   - **75%: 3s poison (1♥)**
   - **25%: 4s poison (1 1/2♥)**
@@ -144,8 +144,8 @@ Effects:
 - every 30s: 4s nausea
 - every 1m40s:
   - 50%: 5s nausea
-  - 25%: 6s nausea, 5s weakness II, 5s mining fatigue II, & 5s slowness
-  - 25%: 7s nausea, 5s weakness II, 5s mining fatigue II, 5s slowness II, 3s blindness, & 10s hunger X (~1.5🍗)
+  - 25%: 6s nausea, 5s weakness, 5s mining fatigue II, & 5s slowness
+  - 25%: 7s nausea, 5s weakness, 5s mining fatigue II, 5s slowness II, 3s blindness, & 10s hunger X (~1.5🍗)
 - every 3m:
   - 75%: 3s poison (1♥)
   - 25%: 4s poison (1 1/2♥)
@@ -165,8 +165,8 @@ Effects:
 - every 30s: 4s nausea
 - every 1m40s:
   - 50%: 5s nausea
-  - 25%: 6s nausea, 5s weakness II, 5s mining fatigue II, & 5s slowness
-  - 25%: 7s nausea, 5s weakness II, 5s mining fatigue II, 5s slowness II, 3s blindness, & 10s hunger X (~1.5🍗)
+  - 25%: 6s nausea, 5s weakness, 5s mining fatigue II, & 5s slowness
+  - 25%: 7s nausea, 5s weakness, 5s mining fatigue II, 5s slowness II, 3s blindness, & 10s hunger X (~1.5🍗)
 - every 3m:
   - 75%: 3s poison (1♥)
   - 25%: 4s poison (1 1/2♥)
@@ -175,8 +175,8 @@ Effects:
 
   - for 1m: hostile mobs within 5 blocks of the player are buffed with 5s regeneration, 5s fire resist, & 5s speed
 <!-- need to check balance. could also be: at any time, if there are >3? hostile mobs within ~15? blocks cause the fear effect (kinda like that better actually) -->
-<!-- old: **any hostile mob within 3 blocks of the player inflicts slowness, blindness, & weakness II** -->
-- **3+ hostile mobs within 15 blocks: 5s slowness, 5s blindness, & 5s weakness II**
+<!-- old: **any hostile mob within 3 blocks of the player inflicts slowness, blindness, & weakness** -->
+- **3+ hostile mobs within 5 blocks: 5s slowness, 5s blindness, & 5s weakness**
 
 # Copyright and License
 

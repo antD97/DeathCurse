@@ -76,8 +76,19 @@ scoreboard objectives add death_curse_fatigue3_end dummy
 scoreboard objectives add death_curse_mob_aggression dummy
 # used to mark hostile mobs with angry particle effect
 scoreboard objectives add death_curse_angry dummy
-# used to keep track of the angry effect particle effect duration
+# used to keep track of the angry particle effect duration
 scoreboard objectives add death_curse_angry_end dummy
+
+# used to mark players with feared particle and sound effect
+scoreboard objectives add death_curse_feared dummy
+# used to keep track of the feared particle and sound effect duration
+scoreboard objectives add death_curse_feared_end dummy
+# used to keep track of when a player is initially feared
+scoreboard objectives add death_curse_feared_init dummy
+# used to mark players who should play the second bump of the fast heart beat timer
+scoreboard objectives add death_curse_next_fast_beat dummy
+# used to mark players who should play the second bump of the slow heart beat timer
+scoreboard objectives add death_curse_next_slow_beat dummy
 
 # temporary values used for function arguments or arithmetic
 scoreboard objectives add death_curse_arg1 dummy

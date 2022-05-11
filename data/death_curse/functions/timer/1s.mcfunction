@@ -13,6 +13,9 @@ scoreboard players add global death_curse_effect_timer 1
 # check player particle durations
 execute as @a run function death_curse:player/check_particle
 
+# play heart beatsounds
+execute as @a run execute positioned as @s run function death_curse:player/heartbeat
+
 # check hostile mob particle durations
 execute as @e[type=minecraft:blaze] run function death_curse:hostile_mob/check_particle
 execute as @e[type=minecraft:creeper] run function death_curse:hostile_mob/check_particle

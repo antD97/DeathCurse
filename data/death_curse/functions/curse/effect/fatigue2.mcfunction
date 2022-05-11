@@ -3,17 +3,17 @@
 
 # applies to the executor:
 # 6s nausea
-# 5s weakness II
+# 5s weakness
 # 5s mining fatigue II
 # 5s slowness
 # plays medium sound
 
 effect give @s minecraft:nausea 6 0 true
-effect give @s minecraft:weakness 5 1 true
+effect give @s minecraft:weakness 5 0 true
 effect give @s minecraft:mining_fatigue 5 1 true
 effect give @s minecraft:slowness 5 0 true
 
-playsound minecraft:ambient.basalt_deltas.additions ambient @s ~ ~10000 ~ 10000
+playsound minecraft:ambient.basalt_deltas.additions ambient @s ~ ~1000 ~ 100000
 
 # enable particle effect
 scoreboard players set @s death_curse_fatigue2 1

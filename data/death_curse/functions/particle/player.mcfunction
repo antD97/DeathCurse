@@ -26,3 +26,8 @@ execute as @s[scores={death_curse_fatigue3=1}] positioned as @s run function dea
 
 # mob aggression
 execute as @s[scores={death_curse_mob_aggression=2}] positioned as @s run particle minecraft:smoke ~ ~0.45 ~ 0.15 0.225 0.15 0 1
+
+# fear only while it's being applied
+scoreboard players operation global death_curse_result1 = @s death_curse_feared_end
+scoreboard players operation global death_curse_result1 -= global death_curse_effect_timer
+execute if score global death_curse_result1 matches 9 positioned as @s run particle minecraft:ambient_entity_effect ~ ~ ~ 1 0 0 255 0

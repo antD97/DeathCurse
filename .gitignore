@@ -1,2 +1,5 @@
 # temporary excel files
 ~*.xlsx
+# temporary audacity files
+*.aup3-shm
+*.aup3-wal

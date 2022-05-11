@@ -23,3 +23,6 @@ execute if score @s death_curse_poison matches 1.. run function death_curse:play
 
 # check fatigue 3 effect scores
 execute if score @s death_curse_fatigue3 matches 1.. run function death_curse:player/check/fatigue3
+
+# check fear effect scores
+execute if score @s death_curse_feared matches 1.. run function death_curse:player/check/fear
