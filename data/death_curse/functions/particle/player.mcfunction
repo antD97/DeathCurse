@@ -1,33 +1,104 @@
 # Copyright © 2022 antD97
 # Licensed under the MIT License https://antD.mit-license.org/
 
-# creates particle effects for player executors
+# curse reds
+# 2     #AA0000 170 0 0
+# 2     #990000 153 0 0
+# 3     #880000 136 0 0
+# 4     #770000 119 0 0
+# 5     #660000 102 0 0
+# 6     #550000 85 0 0
+# 7     #440000 68 0 0
+# 8     #330000 51 0 0
+# 9     #220000 34 0 0
+# 10+   #000000 1 0 0
 
-# curse increase
-execute as @s[scores={death_curse_increase=1}] positioned as @s run function death_curse:particle/curse_increase
+# heal greens
+# 0     #46ffd3 70 0 211
+# 1     #22D3A9 34 211 169
+# 2     #1FC19B 70 0 211
+# 3     #1DAF8D 29 175 141
+# 4     #1A9E7F 26 158 127
+# 5     #16886E 22 136 110
+# 6     #12725C 18 114 92
+# 7     #0F614E 15 97 78
+# 8     #0c4b3c 12 75 60
+# 9     #062921 6 41 33
+# 10+   #000000 1 0 0
 
-# curse decrease
-execute as @s[scores={death_curse_decrease=1}] positioned as @s run function death_curse:particle/curse_decrease
+# Creates particle effects for the player executor
 
-# fatigue 1
-execute as @s[scores={death_curse_fatigue1=1}] positioned as @s run function death_curse:particle/fatigue1
-
-# cloaking
-execute as @s[scores={death_curse_cloaking=1}] positioned as @s run function death_curse:particle/cloaking
-
-# fatigue 2
-execute as @s[scores={death_curse_fatigue2=1}] positioned as @s run function death_curse:particle/fatigue2
-
-# poison
-execute as @s[scores={death_curse_poison=1}] positioned as @s run function death_curse:particle/poison
-
-# fatigue 3
-execute as @s[scores={death_curse_fatigue3=1}] positioned as @s run function death_curse:particle/fatigue3
+#!find=effect
+#!replace=deaths_increase|deaths_decrease|fatigue1|fatigue2|fatigue3|cloaking|poison
+execute as @s[scores={__effect=1}] positioned as @s run function __:particle/player/effect
 
 # mob aggression
-execute as @s[scores={death_curse_mob_aggression=2}] positioned as @s run particle minecraft:smoke ~ ~0.45 ~ 0.15 0.225 0.15 0 1
+execute as @s[scores={__mob_aggression=2}] positioned as @s run particle minecraft:smoke ~ ~0.45 ~ 0.15 0.225 0.15 0 1
 
 # fear only while it's being applied
-scoreboard players operation global death_curse_result1 = @s death_curse_feared_end
-scoreboard players operation global death_curse_result1 -= global death_curse_effect_timer
-execute if score global death_curse_result1 matches 9 positioned as @s run particle minecraft:ambient_entity_effect ~ ~ ~ 1 0 0 255 0
+#!sb global __result1 = @s __feared_end
+#!sb global __result1 -= global __effect_timer
+execute if score global __result1 matches 9 positioned as @s run particle minecraft:ambient_entity_effect ~ ~ ~ 1 0 0 255 0
+
+# Creates the fatiuge1 particle effects for the player executor
+#! __:particle/player/fatigue1
+{
+    execute as @s[scores={__level=2}] run particle minecraft:ambient_entity_effect ~ ~ ~ 153 0 0 255 0
+    execute as @s[scores={__level=3}] run particle minecraft:ambient_entity_effect ~ ~ ~ 136 0 0 255 0
+}
+
+# Creates the fatigue2 particle effects for the player executor
+#! __:particle/player/fatigue2
+{
+    execute as @s[scores={__level=4}] run particle minecraft:entity_effect ~ ~ ~ 119 0 0 255 0
+    execute as @s[scores={__level=5}] run particle minecraft:entity_effect ~ ~ ~ 102 0 0 255 0
+    execute as @s[scores={__level=6}] run particle minecraft:entity_effect ~ ~ ~ 85 0 0 255 0
+    execute as @s[scores={__level=7}] run particle minecraft:entity_effect ~ ~ ~ 68 0 0 255 0
+    execute as @s[scores={__level=8}] run particle minecraft:entity_effect ~ ~ ~ 51 0 0 255 0
+    execute as @s[scores={__level=9}] run particle minecraft:entity_effect ~ ~ ~ 34 0 0 255 0
+    execute as @s[scores={__level=10..}] run particle minecraft:entity_effect ~ ~ ~ 1 0 0 255 0
+}
+
+# Creates the fatigue3 particle effects for the player executor
+#! __:particle/player/fatigue3
+{
+    #!2x
+    execute as @s[scores={__level=7}] run particle minecraft:entity_effect ~ ~ ~ 68 0 0 255 0
+    #!2x
+    execute as @s[scores={__level=8}] run particle minecraft:entity_effect ~ ~ ~ 51 0 0 255 0
+    #!2x
+    execute as @s[scores={__level=9}] run particle minecraft:entity_effect ~ ~ ~ 34 0 0 255 0
+    #!2x
+    execute as @s[scores={__level=10..}] run particle minecraft:entity_effect ~ ~ ~ 1 0 0 255 0
+}
+
+# Creates a cloaking particle effects for the player executor
+#! __:particle/player/cloaking
+{
+    particle minecraft:squid_ink ~ ~0.9 ~ 0.15 0.45 0.15 0 3
+    execute as @s[scores={__level=3}] run particle minecraft:entity_effect ~ ~ ~ 136 0 0 255 0
+    execute as @s[scores={__level=4}] run particle minecraft:entity_effect ~ ~ ~ 119 0 0 255 0
+    execute as @s[scores={__level=5}] run particle minecraft:entity_effect ~ ~ ~ 102 0 0 255 0
+    execute as @s[scores={__level=6}] run particle minecraft:entity_effect ~ ~ ~ 85 0 0 255 0
+    execute as @s[scores={__level=7}] run particle minecraft:entity_effect ~ ~ ~ 68 0 0 255 0
+    execute as @s[scores={__level=8}] run particle minecraft:entity_effect ~ ~ ~ 51 0 0 255 0
+    execute as @s[scores={__level=9}] run particle minecraft:entity_effect ~ ~ ~ 34 0 0 255 0
+    execute as @s[scores={__level=10..}] run particle minecraft:entity_effect ~ ~ ~ 1 0 0 255 0
+}
+
+# Creates a poison particle effect for the player executor
+#! __:particle/player/poison
+{
+    #!5x
+    execute as @s[scores={__level=5}] run particle minecraft:entity_effect ~ ~ ~ 102 0 0 255 0
+    #!5x
+    execute as @s[scores={__level=6}] run particle minecraft:entity_effect ~ ~ ~ 85 0 0 255 0
+    #!5x
+    execute as @s[scores={__level=7}] run particle minecraft:entity_effect ~ ~ ~ 68 0 0 255 0
+    #!5x
+    execute as @s[scores={__level=8}] run particle minecraft:entity_effect ~ ~ ~ 51 0 0 255 0
+    #!5x
+    execute as @s[scores={__level=9}] run particle minecraft:entity_effect ~ ~ ~ 34 0 0 255 0
+    #!5x
+    execute as @s[scores={__level=10..}] run particle minecraft:entity_effect ~ ~ ~ 1 0 0 255 0
+}

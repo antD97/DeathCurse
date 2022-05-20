@@ -1,0 +1,14 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "criteria": {
+        "Curse Cookie I": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "death_curse:curse_cookie1"
+            }
+        }
+    },
+    "rewards": {
+        "function": "death_curse:item/curse_cookie1"
+    }
+}

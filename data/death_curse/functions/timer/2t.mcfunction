@@ -2,44 +2,32 @@
 # Licensed under the MIT License https://antD.mit-license.org/
 
 # 2t (0.1s) timer
-schedule function death_curse:timer/2t 2t
+schedule function __:timer/2t 2t
 
 # apply particle effects to players
-execute as @a run function death_curse:particle/player
+execute as @a run function __:particle/player
 
 # apply particle effects to hostile mobs
-execute as @e[type=minecraft:blaze] run function death_curse:particle/hostile
-execute as @e[type=minecraft:creeper] run function death_curse:particle/hostile
-execute as @e[type=minecraft:drowned] run function death_curse:particle/hostile
-execute as @e[type=minecraft:elder_guardian] run function death_curse:particle/hostile
-execute as @e[type=minecraft:endermite] run function death_curse:particle/hostile
-execute as @e[type=minecraft:evoker] run function death_curse:particle/hostile
-execute as @e[type=minecraft:ghast] run function death_curse:particle/hostile
-execute as @e[type=minecraft:guardian] run function death_curse:particle/hostile
-execute as @e[type=minecraft:hoglin] run function death_curse:particle/hostile
-execute as @e[type=minecraft:husk] run function death_curse:particle/hostile
-execute as @e[type=minecraft:illusioner] run function death_curse:particle/hostile
-execute as @e[type=minecraft:magma_cube] run function death_curse:particle/hostile
-execute as @e[type=minecraft:phantom] run function death_curse:particle/hostile
-execute as @e[type=minecraft:piglin_brute] run function death_curse:particle/hostile
-execute as @e[type=minecraft:pillager] run function death_curse:particle/hostile
-execute as @e[type=minecraft:ravager] run function death_curse:particle/hostile
-execute as @e[type=minecraft:shulker] run function death_curse:particle/hostile
-execute as @e[type=minecraft:silverfish] run function death_curse:particle/hostile
-execute as @e[type=minecraft:skeleton] run function death_curse:particle/hostile
-execute as @e[type=minecraft:slime] run function death_curse:particle/hostile
-execute as @e[type=minecraft:stray] run function death_curse:particle/hostile
-execute as @e[type=minecraft:vex] run function death_curse:particle/hostile
-execute as @e[type=minecraft:vindicator] run function death_curse:particle/hostile
-execute as @e[type=minecraft:witch] run function death_curse:particle/hostile
-execute as @e[type=minecraft:wither] run function death_curse:particle/hostile
-execute as @e[type=minecraft:wither_skeleton] run function death_curse:particle/hostile
-execute as @e[type=minecraft:zoglin] run function death_curse:particle/hostile
-execute as @e[type=minecraft:zombie] run function death_curse:particle/hostile
-execute as @e[type=minecraft:zombie_villager] run function death_curse:particle/hostile
+#!find=blaze
+#!replace=blaze|creeper|drowned|elder_guardian|endermite|evoker|ghast|guardian|hoglin|husk\
+    #! |illusioner|magma_cube|phantom|piglin_brute|pillager|ravager|shulker|silverfish|skeleton\
+    #! |slime|stray|vex|vindicator|witch|wither|wither_skeleton|zoglin|zombie|zombie_villager
+execute as @e[type=minecraft:blaze] run function __:particle/hostile
 
-execute as @e[type=minecraft:cave_spider] run function death_curse:particle/hostile
-execute as @e[type=minecraft:enderman] run function death_curse:particle/hostile
-execute as @e[type=minecraft:piglin] run function death_curse:particle/hostile
-execute as @e[type=minecraft:spider] run function death_curse:particle/hostile
-execute as @e[type=minecraft:zombified_piglin] run function death_curse:particle/hostile
+# apply particle effects to hostile mobs
+#!find=cave_spider
+#!replace=cave_spider|enderman|piglin|spider|zombified_piglin
+execute as @e[type=minecraft:cave_spider] run function __:particle/hostile
+
+# calculate curse level for each player
+execute as @a run function __:player/calc_level
+
+# Execute as every item...
+execute as @e[type=minecraft:item] run function __:timer/2t/all_items1
+{
+    # set all curse wards invulnerable
+    #!find=379300
+    #!replace=379300|379301|379302
+    execute as @s[nbt={Item:{tag:{CustomModelData:379300}}}] run data modify entity @s Invulnerable set value 1b
+}
+

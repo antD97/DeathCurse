@@ -1,6 +1,6 @@
 # Death Curse
 
-<!-- [![GitHub release](https://img.shields.io/github/downloads/antD97/SDPS/v1.0/total)](https://github.com/antD97/SmiteDPS/releases/tag/v1.0) -->
+<!-- [![GitHub release](https://img.shields.io/github/downloads/antD97/DeathCurse/v1.0/total)](https://github.com/antD97/DeathCurse/releases/tag/v1.0) -->
 
 <!-- bringing someone back to life "comes with a price"/"has a cost"/"takes a lot of energy/takes a lot of work" -->
 <!-- you will find "yourself"/"life to be"/"things"/"the world" -->
@@ -14,7 +14,7 @@ the curse worsens. Some of the features require particles to be enabled so be su
 
 Curse difficulty balance is currently a work in progress and everything is subject to change.
 
-<!-- You can find the download [here](https://github.com/antD97/SmiteDPS/releases/tag/v1.0). -->
+<!-- You can find the download [here](https://github.com/antD97/DeathCurse/releases/tag/v1.0). -->
 
 # Player Triggers
 
@@ -154,7 +154,6 @@ Effects:
 <!-- or every 1m 20% chance? same thing, but more random -->
 - every 5m:
   - 1 hostile mob within 30 blocks of the player will be cloaked and silenced for 20m (max 3 at a time)
-
   - **for 1m: hostile mobs within 5 blocks of the player are buffed with 5s regeneration, 5s fire resist, & 5s speed**
 
 ## Death Curse X+
@@ -172,7 +171,6 @@ Effects:
   - 25%: 4s poison (1 1/2♥)
 - every 5m:
   - 1 hostile mob within 30 blocks of the player will be cloaked and silenced for 20m (max 3 at a time)
-
   - for 1m: hostile mobs within 5 blocks of the player are buffed with 5s regeneration, 5s fire resist, & 5s speed
 <!-- need to check balance. could also be: at any time, if there are >3? hostile mobs within ~15? blocks cause the fear effect (kinda like that better actually) -->
 <!-- old: **any hostile mob within 3 blocks of the player inflicts slowness, blindness, & weakness** -->

@@ -1,0 +1,20 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "minecraft:item/enchanted_book"
+    },
+    "overrides": [
+        {
+            "predicate": { "custom_model_data": 379300 },
+            "model": "death_curse/curse_ward_1"
+        },
+        {
+            "predicate": { "custom_model_data": 379301 },
+            "model": "death_curse/curse_ward_2"
+        },
+        {
+            "predicate": { "custom_model_data": 379302 },
+            "model": "death_curse/curse_ward_3"
+        }
+    ]
+}

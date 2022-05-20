@@ -3,3 +3,5 @@
 # temporary audacity files
 *.aup3-shm
 *.aup3-wal
+
+*.psd
