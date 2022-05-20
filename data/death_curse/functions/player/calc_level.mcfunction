@@ -17,6 +17,11 @@ execute store result score global __arg1 run clear @s minecraft:enchanted_book{C
 #!sb global __arg1 *= global __arg2
 #!sb global __result1 += global __arg1
 
+# calculate reduction from curse cookies
+execute if score @s __curse_cookie1_effect matches 1 run scoreboard players add global __result1 1
+execute if score @s __curse_cookie2_effect matches 1 run scoreboard players add global __result1 2
+execute if score @s __curse_cookie3_effect matches 1 run scoreboard players add global __result1 3
+
 # set level with reduction
 #!sb @s __level = @s __deaths
 #!sb @s __level -= global __result1

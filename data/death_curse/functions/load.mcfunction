@@ -96,6 +96,20 @@ scoreboard objectives add __next_fast_beat dummy
 # used to mark players who should play the second bump of the slow heart beat timer
 scoreboard objectives add __next_slow_beat dummy
 
+# player holding curse cookie detection
+scoreboard objectives add __holding_curse_cookie1 dummy
+scoreboard objectives add __holding_curse_cookie2 dummy
+scoreboard objectives add __holding_curse_cookie3 dummy
+# player eaten cookie
+scoreboard objectives add __eaten_cookie minecraft.used:minecraft.cookie
+# player curse cookie effects
+scoreboard objectives add __curse_cookie1_effect dummy
+scoreboard objectives add __curse_cookie2_effect dummy
+scoreboard objectives add __curse_cookie3_effect dummy
+scoreboard objectives add __curse_cookie1_effect_end dummy
+scoreboard objectives add __curse_cookie2_effect_end dummy
+scoreboard objectives add __curse_cookie3_effect_end dummy
+
 # temporary values used for function arguments or arithmetic
 scoreboard objectives add __arg1 dummy
 scoreboard objectives add __arg2 dummy

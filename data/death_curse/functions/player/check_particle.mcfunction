@@ -66,3 +66,48 @@ execute if score @s __feared matches 1.. run function __:player/check_particle/f
     scoreboard players operation global __result1 -= global __effect_timer
     execute if score global __result1 matches ..0 run scoreboard players set @s __feared 0
 }
+
+# Check curse cookie 1 effect scores
+execute if score @s __curse_cookie1_effect matches 1.. run function __:player/check_particle/curse_cookie1
+{
+    scoreboard players operation global __result1 = @s __curse_cookie1_effect_end
+    scoreboard players operation global __result1 -= global __effect_timer
+
+    execute if score global __result1 matches 300 run title @s actionbar {"text":"Curse Reduction I effect ends in 5 minutes...","italic":true}
+    execute if score global __result1 matches 60 run title @s actionbar {"text":"Curse Reduction I effect ends in 1 minute...","italic":true}
+    #!find=2
+    #!replace=2|3|4|5|6|7|8|9|10
+    execute if score global __result1 matches 2 run title @s actionbar {"text":"Curse Reduction I ends in 2 seconds...","italic":true}
+    execute if score global __result1 matches 1 run title @s actionbar {"text":"Curse Reduction I ends in 1 second...","italic":true}
+    execute if score global __result1 matches ..0 run scoreboard players set @s __curse_cookie1_effect 0
+}
+
+# Check curse cookie 2 effect scores
+execute if score @s __curse_cookie2_effect matches 1.. run function __:player/check_particle/curse_cookie2
+{
+    scoreboard players operation global __result1 = @s __curse_cookie2_effect_end
+    scoreboard players operation global __result1 -= global __effect_timer
+
+    execute if score global __result1 matches 300 run title @s actionbar {"text":"Curse Reduction II effect ends in 5 minutes...","italic":true}
+    execute if score global __result1 matches 60 run title @s actionbar {"text":"Curse Reduction II effect ends in 1 minute...","italic":true}
+    #!find=2
+    #!replace=2|3|4|5|6|7|8|9|10
+    execute if score global __result1 matches 2 run title @s actionbar {"text":"Curse Reduction II ends in 2 seconds...","italic":true}
+    execute if score global __result1 matches 1 run title @s actionbar {"text":"Curse Reduction II ends in 1 second...","italic":true}
+    execute if score global __result1 matches ..0 run scoreboard players set @s __curse_cookie2_effect 0
+}
+
+# Check curse cookie 3 effect scores
+execute if score @s __curse_cookie3_effect matches 1.. run function __:player/check_particle/curse_cookie3
+{
+    scoreboard players operation global __result1 = @s __curse_cookie3_effect_end
+    scoreboard players operation global __result1 -= global __effect_timer
+
+    execute if score global __result1 matches 300 run title @s actionbar {"text":"Curse Reduction III effect ends in 5 minutes...","italic":true}
+    execute if score global __result1 matches 60 run title @s actionbar {"text":"Curse Reduction III effect ends in 1 minute...","italic":true}
+    #!find=2
+    #!replace=2|3|4|5|6|7|8|9|10
+    execute if score global __result1 matches 2 run title @s actionbar {"text":"Curse Reduction III ends in 2 seconds...","italic":true}
+    execute if score global __result1 matches 1 run title @s actionbar {"text":"Curse Reduction III ends in 1 second...","italic":true}
+    execute if score global __result1 matches ..0 run scoreboard players set @s __curse_cookie3_effect 0
+}

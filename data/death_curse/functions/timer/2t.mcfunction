@@ -19,8 +19,14 @@ execute as @e[type=minecraft:blaze] run function __:particle/hostile
 #!replace=cave_spider|enderman|piglin|spider|zombified_piglin
 execute as @e[type=minecraft:cave_spider] run function __:particle/hostile
 
-# calculate curse level for each player
-execute as @a run function __:player/calc_level
+execute as @a run function __:timer/2t/player
+{
+    # calculate curse level for each player
+    function __:player/calc_level
+
+    # check if eaten a curse cookie & apply effects
+    function __:player/curse_cookie
+}
 
 # Execute as every item...
 execute as @e[type=minecraft:item] run function __:timer/2t/all_items1
@@ -28,6 +34,5 @@ execute as @e[type=minecraft:item] run function __:timer/2t/all_items1
     # set all curse wards invulnerable
     #!find=379300
     #!replace=379300|379301|379302
-    execute as @s[nbt={Item:{tag:{CustomModelData:379300}}}] run data modify entity @s Invulnerable set value 1b
+    execute as @s[nbt={Item:{id:"minecraft:enchanted_book",tag:{CustomModelData:379300}}}] run data modify entity @s Invulnerable set value 1b
 }
-

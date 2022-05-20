@@ -83,3 +83,6 @@ execute as @s[scores={__deaths=7..}] positioned as @s run playsound minecraft:am
 #!sb @s __fatigue3_end = -100
 #!sb @s __mob_aggression_end = -100
 #!sb @s __feared_end = -100
+#!sb @s __curse_cookie1_effect_end = -100
+#!sb @s __curse_cookie2_effect_end = -100
+#!sb @s __curse_cookie3_effect_end = -100

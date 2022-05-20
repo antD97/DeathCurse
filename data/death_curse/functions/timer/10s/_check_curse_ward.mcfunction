@@ -28,7 +28,7 @@
 
     # if on fire & time alive is old enough, count close, old enough, & on fire curse ward 1s into global __result1
     #!sb global __result1 = 0
-    execute if score @s __time_alive matches 2.. positioned as @s as @e[type=minecraft:item,scores={__time_alive=2..},nbt={Item:{tag:{CustomModelData:379300}}},distance=..1] run function __:timer/10s/count_fire_curse_ward1
+    execute if score @s __time_alive matches 2.. positioned as @s as @e[type=minecraft:item,scores={__time_alive=2..},nbt={Item:{id:"minecraft:enchanted_book",tag:{CustomModelData:379300}}},distance=..1] run function __:timer/10s/count_fire_curse_ward1
     {
         execute store result score @s __arg1 run data get entity @s Fire
         execute run scoreboard players add global __result1 1
@@ -63,7 +63,7 @@
 
     # if on fire & time alive is old enough, count close, old enough, & on fire curse ward 2s into global __result1
     #!sb global __result1 = 0
-    execute if score @s __time_alive matches 2.. positioned as @s as @e[type=minecraft:item,scores={__time_alive=2..},nbt={Item:{tag:{CustomModelData:379301}}},distance=..1] run function __:timer/10s/count_fire_curse_ward2
+    execute if score @s __time_alive matches 2.. positioned as @s as @e[type=minecraft:item,scores={__time_alive=2..},nbt={Item:{id:"minecraft:enchanted_book",tag:{CustomModelData:379301}}},distance=..1] run function __:timer/10s/count_fire_curse_ward2
     {
         execute store result score @s __arg1 run data get entity @s Fire
         execute run scoreboard players add global __result1 1

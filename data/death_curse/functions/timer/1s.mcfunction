@@ -7,6 +7,11 @@ schedule function __:timer/1s 1s
 # curse
 execute as @a[scores={__time_alive=1..}] run function __:curse/tick
 
+# slow curse cookie particle effects
+execute as @a[scores={__curse_cookie1_effect=1..}] run execute positioned as @s run particle minecraft:ambient_entity_effect ~ ~ ~ 0 0 0 1 1
+execute as @a[scores={__curse_cookie2_effect=1..}] run execute positioned as @s run particle minecraft:ambient_entity_effect ~ ~ ~ 0 0 0 1 2
+execute as @a[scores={__curse_cookie3_effect=1..}] run execute positioned as @s run particle minecraft:ambient_entity_effect ~ ~ ~ 0 0 0 1 3
+
 # curse effect timer
 #!sb global __effect_timer += 1
 

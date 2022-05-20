@@ -31,6 +31,14 @@
     # effect offset4:
     tellraw @s ["",{"text":"global effect timer: "},{"score":{"name":"global","objective":"__effect_timer"}},{"text":"\neffect offset1: "},{"score":{"name":"@s","objective":"__effect_offset1"}},{"text":"\neffect offset2: "},{"score":{"name":"@s","objective":"__effect_offset2"}},{"text":"\neffect offset3: "},{"score":{"name":"@s","objective":"__effect_offset3"}},{"text":"\neffect offset4: "},{"score":{"name":"@s","objective":"__effect_offset4"}},{"text":"\n "}]
 
+    # curse cookie 1:
+    # curse cookie 1 end:
+    # curse cookie 2:
+    # curse cookie 2 end:
+    # curse cookie 3:
+    # curse cookie 3 end:
+    tellraw @s ["",{"text":"curse cookie 1: "},{"score":{"name":"@s","objective":"__curse_cookie1_effect"}},{"text":"\ncurse cookie 1 end: "},{"score":{"name":"@s","objective":"__curse_cookie1_effect_end"}},{"text":"\ncurse cookie 2: "},{"score":{"name":"@s","objective":"__curse_cookie2_effect"}},{"text":"\ncurse cookie 2 end: "},{"score":{"name":"@s","objective":"__curse_cookie2_effect_end"}},{"text":"\ncurse cookie 3: "},{"score":{"name":"@s","objective":"__curse_cookie3_effect"}},{"text":"\ncurse cookie 3 end: "},{"score":{"name":"@s","objective":"__curse_cookie3_effect_end"}},{"text":"\n "}]
+
     # ----- DEBUG END -----
     tellraw @s {"text":"----- DEBUG END -----"}
 }
@@ -93,6 +101,17 @@
     scoreboard objectives remove __feared_init
     scoreboard objectives remove __next_fast_beat
     scoreboard objectives remove __next_slow_beat
+
+    scoreboard objectives remove __holding_curse_cookie1
+    scoreboard objectives remove __holding_curse_cookie2
+    scoreboard objectives remove __holding_curse_cookie3
+    scoreboard objectives remove __eaten_cookie
+    scoreboard objectives remove __curse_cookie1_effect
+    scoreboard objectives remove __curse_cookie2_effect
+    scoreboard objectives remove __curse_cookie3_effect
+    scoreboard objectives remove __curse_cookie1_effect_end
+    scoreboard objectives remove __curse_cookie2_effect_end
+    scoreboard objectives remove __curse_cookie3_effect_end
 
     scoreboard objectives remove __arg1
     scoreboard objectives remove __arg2
