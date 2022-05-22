@@ -39,6 +39,11 @@
     # curse cookie 3 end:
     tellraw @s ["",{"text":"curse cookie 1: "},{"score":{"name":"@s","objective":"__curse_cookie1_effect"}},{"text":"\ncurse cookie 1 end: "},{"score":{"name":"@s","objective":"__curse_cookie1_effect_end"}},{"text":"\ncurse cookie 2: "},{"score":{"name":"@s","objective":"__curse_cookie2_effect"}},{"text":"\ncurse cookie 2 end: "},{"score":{"name":"@s","objective":"__curse_cookie2_effect_end"}},{"text":"\ncurse cookie 3: "},{"score":{"name":"@s","objective":"__curse_cookie3_effect"}},{"text":"\ncurse cookie 3 end: "},{"score":{"name":"@s","objective":"__curse_cookie3_effect_end"}},{"text":"\n "}]
 
+    # res. abom. 1:
+    # res. abom. 2:
+    # res. abom. 3:
+    tellraw @s ["",{"text":"res. abom. 1: "},{"score":{"name":"@s","objective":"__res_abom_effect1"}},{"text":"\nres. abom. 2: "},{"score":{"name":"@s","objective":"__res_abom_effect2"}},{"text":"\nres. abom. 3: "},{"score":{"name":"@s","objective":"__res_abom_effect3"}},{"text":"\n "}]
+
     # ----- DEBUG END -----
     tellraw @s {"text":"----- DEBUG END -----"}
 }
@@ -53,10 +58,12 @@
     scoreboard objectives remove __time_alive
     scoreboard objectives remove __prev_level
     scoreboard objectives remove __hp
+    scoreboard objectives remove __food
 
     scoreboard objectives remove __intro
     scoreboard objectives remove __introduced
     scoreboard objectives remove __give_book
+    scoreboard objectives remove __curse_level
     scoreboard objectives remove __n_books
 
     scoreboard objectives remove __effect_timer
@@ -68,8 +75,12 @@
 
     scoreboard objectives remove __deaths_increase
     scoreboard objectives remove __deaths_increase_end
-    scoreboard objectives remove __deaths_decrease
-    scoreboard objectives remove __deaths_decrease_end
+    scoreboard objectives remove __deaths_decrease1
+    scoreboard objectives remove __deaths_decrease1_end
+    scoreboard objectives remove __deaths_decrease2
+    scoreboard objectives remove __deaths_decrease2_end
+    scoreboard objectives remove __deaths_decrease3
+    scoreboard objectives remove __deaths_decrease3_end
 
     scoreboard objectives remove __fatigue1
     scoreboard objectives remove __fatigue1_end
@@ -113,15 +124,41 @@
     scoreboard objectives remove __curse_cookie2_effect_end
     scoreboard objectives remove __curse_cookie3_effect_end
 
+    scoreboard objectives remove __holding_res_abom1
+    scoreboard objectives remove __holding_res_abom2
+    scoreboard objectives remove __holding_res_abom3
+    scoreboard objectives remove __eaten_beetroot_soup
+    scoreboard objectives remove __res_abom_effect1
+    scoreboard objectives remove __res_abom_effect2
+    scoreboard objectives remove __res_abom_effect3
+
+    scoreboard objectives remove __jitter_effect
+    scoreboard objectives remove __jitter_effect_end
+
+    scoreboard objectives remove __smoke
+    scoreboard objectives remove __strike
+
+    scoreboard objectives remove __sleeping
+
     scoreboard objectives remove __arg1
     scoreboard objectives remove __arg2
     scoreboard objectives remove __result1
     scoreboard objectives remove __result2
 
     # clear all scheduled functions
+    schedule clear __:timer/1t
     schedule clear __:timer/2t
     schedule clear __:timer/10t
     schedule clear __:timer/1s
     schedule clear __:timer/10s
     schedule clear __:timer/1h
+
+    kill @e[type=marker,tag=__player_lock]
+}
+
+# :)
+#! __:op/secret_feature
+{
+    say I'm a dumb idiot!
+    tellraw @s ["",{"text":"antD whispers to you: Gotcha! :)","italic":true,"color":"gray"}]
 }

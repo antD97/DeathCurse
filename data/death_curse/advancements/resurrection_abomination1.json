@@ -1,0 +1,14 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "criteria": {
+        "Resurrection Abomination I": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "death_curse:resurrection_abomination1"
+            }
+        }
+    },
+    "rewards": {
+        "function": "death_curse:item/resurrection_abomination1"
+    }
+}

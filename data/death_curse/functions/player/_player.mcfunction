@@ -51,6 +51,34 @@
     tellraw @s[scores={__n_books=129..}] {"text":"Again? Seriously?"}
 #! }
 
+# Tell the executor their death count and curse level
+#! __:player/curse_level
+{
+    execute if score @s __deaths matches 0 run tellraw @s {"text":"Current death count: 0"}
+    execute if score @s __deaths matches 1 run tellraw @s ["",{"text":"Current death count: "},{"text":"1","color":"#AA0000"}]
+    execute if score @s __deaths matches 2 run tellraw @s ["",{"text":"Current death count: "},{"text":"2","color":"#990000"}]
+    execute if score @s __deaths matches 3 run tellraw @s ["",{"text":"Current death count: "},{"text":"3","color":"#880000"}]
+    execute if score @s __deaths matches 4 run tellraw @s ["",{"text":"Current death count: "},{"text":"4","color":"#770000"}]
+    execute if score @s __deaths matches 5 run tellraw @s ["",{"text":"Current death count: "},{"text":"5","color":"#660000"}]
+    execute if score @s __deaths matches 6 run tellraw @s ["",{"text":"Current death count: "},{"text":"6","color":"#550000"}]
+    execute if score @s __deaths matches 7 run tellraw @s ["",{"text":"Current death count: "},{"text":"7","color":"#440000"}]
+    execute if score @s __deaths matches 8 run tellraw @s ["",{"text":"Current death count: "},{"text":"8","color":"#330000"}]
+    execute if score @s __deaths matches 9 run tellraw @s ["",{"text":"Current death count: "},{"text":"9","color":"#220000"}]
+    execute if score @s __deaths matches 10.. run tellraw @s ["",{"text":"Current death count: "},{"score":{"name":"@s","objective":"__deaths"},"color":"#000000"}]
+
+    execute if score @s __level matches 0 run tellraw @s {"text":"Current curse level: 0"}
+    execute if score @s __level matches 1 run tellraw @s ["",{"text":"Current curse level: "},{"text":"1","color":"#AA0000"}]
+    execute if score @s __level matches 2 run tellraw @s ["",{"text":"Current curse level: "},{"text":"2","color":"#990000"}]
+    execute if score @s __level matches 3 run tellraw @s ["",{"text":"Current curse level: "},{"text":"3","color":"#880000"}]
+    execute if score @s __level matches 4 run tellraw @s ["",{"text":"Current curse level: "},{"text":"4","color":"#770000"}]
+    execute if score @s __level matches 5 run tellraw @s ["",{"text":"Current curse level: "},{"text":"5","color":"#660000"}]
+    execute if score @s __level matches 6 run tellraw @s ["",{"text":"Current curse level: "},{"text":"6","color":"#550000"}]
+    execute if score @s __level matches 7 run tellraw @s ["",{"text":"Current curse level: "},{"text":"7","color":"#440000"}]
+    execute if score @s __level matches 8 run tellraw @s ["",{"text":"Current curse level: "},{"text":"8","color":"#330000"}]
+    execute if score @s __level matches 9 run tellraw @s ["",{"text":"Current curse level: "},{"text":"9","color":"#220000"}]
+    execute if score @s __level matches 10.. run tellraw @s ["",{"text":"Current curse level: "},{"score":{"name":"@s","objective":"__level"},"color":"#000000"}]
+}
+
 # Plays heartbeat sounds for the executing player
 #! __:player/heartbeat
 {

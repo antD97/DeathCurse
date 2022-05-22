@@ -33,7 +33,7 @@ execute if score global __result1 matches 0 run function __:curse/effect_group/l
         effect give @s minecraft:mining_fatigue 5 0 true
         effect give @s minecraft:slowness 5 0 true
 
-        execute positioned as @s run playsound minecraft:ambient.basalt_deltas.additions ambient @s ~ ~1000 ~ 100000
+        execute positioned as @s run playsound minecraft:ambient.basalt_deltas.additions ambient @s ~ ~1000 ~ 100000 1 100000
 
         # enable particle effect
         #!sb @s __fatigue1 = 1

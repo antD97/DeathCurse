@@ -19,8 +19,8 @@
     # increment time alive if on fire
     execute if score @s __arg1 matches 1.. run scoreboard players add @s __time_alive 1
 
-    # 10s till ready particle effect 
-    execute if score @s __time_alive matches 1 run function __:particle/curse_ward1_soon
+    # 10s till ready particle effect
+    execute as @s[scores={__time_alive=1}] run function __:particle/curse_ward1_soon
     {
         #!5x
         execute positioned as @s run particle minecraft:ambient_entity_effect ~ ~0.125 ~ 170 0 0 255 0
@@ -54,8 +54,8 @@
     # increment time alive if on fire
     execute if score @s __arg1 matches 1.. run scoreboard players add @s __time_alive 1
 
-    # 10s till ready particle effect 
-    execute if score @s __time_alive matches 1 run function __:particle/curse_ward2_soon
+    # 10s till ready particle effect
+    execute as @s[scores={__time_alive=1}] run function __:particle/curse_ward2_soon
     {
         #!5x
         execute positioned as @s run particle minecraft:ambient_entity_effect ~ ~0.125 ~ 85 0 0 255 0

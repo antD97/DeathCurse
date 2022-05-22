@@ -6,8 +6,8 @@
 # level effects
 #!find=0
 #!replace=0|1|2|3|4|5|6|7|8|9
-execute as @a[scores={__level=0}] run function __:curse/level/0
-execute as @a[scores={__level=10..}] run function __:curse/level/10
+execute as @a[scores={__level=0,__res_abom_effect1=..1,__res_abom_effect2=..1,__res_abom_effect3=..1}] run function __:curse/level/0
+execute as @a[scores={__level=10..,__res_abom_effect1=..1,__res_abom_effect2=..1,__res_abom_effect3=..1}] run function __:curse/level/10
 
 # mob aggression duration check
 # find mob_aggression_end - effect_timer

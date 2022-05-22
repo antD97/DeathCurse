@@ -93,7 +93,7 @@ execute if score @s __time_alive matches 1.. run execute if score global __resul
     # 5                                                     +poison
     # 6                                                     +curse leak -3 hearts
     # 7                                                     +fatigue
-    # 8                                                     +poison -4 hearts
+    # 8     You are                                         +poison -4 hearts
     # 9                                                     +mob aggression
     # 10    You feel afraid.                                +fear -5 hearts
     # 11+   You feel hopeless.

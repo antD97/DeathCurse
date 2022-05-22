@@ -23,5 +23,5 @@ execute if score global __result1 matches 0 run function __:curse/effect/nausea1
 execute if score global __result1 matches 0 run function __:curse/effect/nausea2
 {
     effect give @s minecraft:nausea 5 0 true
-    execute positioned as @s run playsound minecraft:ambient.crimson_forest.additions ambient @s ~ ~1000 ~ 100000
+    execute positioned as @s run playsound minecraft:ambient.crimson_forest.additions ambient @s ~ ~1000 ~ 100000 1 100000
 }

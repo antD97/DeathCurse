@@ -50,6 +50,24 @@
     give @s cookie{display:{Name:'{"text":"Curse Cookie III","color":"#000000","bold":true,"italic":true}',Lore:['{"text":"-3 Death Curse Levels for 30m"}']},CustomModelData:379305} 1
 }
 
+#! __:item/resurrection_abomination1
+{
+    recipe take @s __:resurrection_abomination1
+    advancement revoke @s only __:resurrection_abomination1
+    give @s beetroot_soup{display:{Name:'[{"text":"Resurr","color":"#AA0000","bold":true,"italic":true},{"text":"e","color":"#AA0000","bold":true,"italic":true,"obfuscated":true},{"text":"ction Abomination ","color":"#AA0000","bold":true,"italic":true},{"text":"I","color":"#AA0000","bold":true,"italic":true,"obfuscated":true}]',Lore:['{"text":"-1 Death"}']},CustomModelData:379306,Enchantments:[{}]} 1
+    clear @s minecraft:knowledge_book
+}
+
+#! __:item/resurrection_abomination2
+{
+    give @s beetroot_soup{display:{Name:'[{"text":"Re","color":"#440000","bold":true,"italic":true},{"text":"su","color":"#440000","bold":true,"italic":true,"obfuscated":true},{"text":"rrection Abomina","color":"#440000","bold":true,"italic":true},{"text":"t","color":"#440000","bold":true,"italic":true,"obfuscated":true},{"text":"ion II","color":"#440000","bold":true,"italic":true}]',Lore:['[{"text":"-3 D"},{"text":"e","obfuscated":true},{"text":"aths"}]']},CustomModelData:379307,Enchantments:[{}]} 1
+}
+
+#! __:item/resurrection_abomination3
+{
+    give @s beetroot_soup{display:{Name:'[{"text":"R","color":"#000000","bold":true,"italic":true},{"text":"es","color":"#000000","bold":true,"italic":true,"obfuscated":true},{"text":"urre","color":"#000000","bold":true,"italic":true},{"text":"c","color":"#000000","bold":true,"italic":true,"obfuscated":true},{"text":"tion Abom","color":"#000000","bold":true,"italic":true},{"text":"i","color":"#000000","bold":true,"italic":true,"obfuscated":true},{"text":"nati","color":"#000000","bold":true,"italic":true},{"text":"o","color":"black","bold":true,"italic":true,"obfuscated":true},{"text":"n III","color":"#000000","bold":true,"italic":true}]',Lore:['[{"text":"-9 Dea"},{"text":"th","obfuscated":true},{"text":"s"}]']},CustomModelData:379308,Enchantments:[{}]} 1
+}
+
 # Make the executing item invulnerable and never despawn
 #! __:item/invulnerable
 {

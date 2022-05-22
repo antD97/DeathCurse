@@ -5,7 +5,7 @@
 schedule function __:timer/10t 10t
 
 # run function curse_title for any player who just died
-execute as @a[scores={__time_alive=1..10, __deaths=1..}] run function __:player/on_death
+execute as @a[scores={__time_alive=1..10}] run function __:player/on_death
 
 # intro trigger
 execute as @a[scores={__intro=1..}] run function __:player/intro
@@ -16,3 +16,8 @@ execute as @a[scores={__intro=1..}] run function __:player/intro
 execute as @a[scores={__give_book=1..}] run function __:player/give_book
 #!sb enable @a __give_book
 #!sb @a __give_book = 0
+
+# curse level trigger
+execute as @a[scores={__curse_level=1..}] run function __:player/curse_level
+#!sb enable @a __curse_level
+#!sb @a __curse_level = 0

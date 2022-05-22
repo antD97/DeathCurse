@@ -116,7 +116,7 @@ Effects:
 - every 1m40s:
   - 50%: 5s nausea
   - **25%:** 6s nausea, 5s weakness, 5s mining fatigue II, & 5s slowness
-  - **25%: 7s nausea, 5s weakness, 5s mining fatigue II, 5s slowness II, 3s blindness, & 10s hunger X (~1.5🍗)**
+  - **25%: 7s nausea, 5s weakness, 5s mining fatigue II, 5s slowness II, 3s blindness, & +10s hunger X (~1.5🍗) (hunger is not applied if current food is 3 or less)**
 - every 3m:
   - 75%: 2s poison (1/2♥)
   - 25%: 3s poison (1♥)
@@ -130,7 +130,7 @@ Effects:
 - every 1m40s:
   - 50%: 5s nausea
   - 25%: 6s nausea, 5s weakness, 5s mining fatigue II, & 5s slowness
-  - 25%: 7s nausea, 5s weakness, 5s mining fatigue II, 5s slowness II, 3s blindness, & 10s hunger X (~1.5🍗)
+  - 25%: 7s nausea, 5s weakness, 5s mining fatigue II, 5s slowness II, 3s blindness, & 10s hunger X (~1.5🍗) (hunger is not applied if current food is 3 or less)
 - **every 3m:**
   - **75%: 3s poison (1♥)**
   - **25%: 4s poison (1 1/2♥)**
@@ -145,7 +145,7 @@ Effects:
 - every 1m40s:
   - 50%: 5s nausea
   - 25%: 6s nausea, 5s weakness, 5s mining fatigue II, & 5s slowness
-  - 25%: 7s nausea, 5s weakness, 5s mining fatigue II, 5s slowness II, 3s blindness, & 10s hunger X (~1.5🍗)
+  - 25%: 7s nausea, 5s weakness, 5s mining fatigue II, 5s slowness II, 3s blindness, & 10s hunger X (~1.5🍗) (hunger is not applied if current food is 3 or less)
 - every 3m:
   - 75%: 3s poison (1♥)
   - 25%: 4s poison (1 1/2♥)
@@ -165,7 +165,7 @@ Effects:
 - every 1m40s:
   - 50%: 5s nausea
   - 25%: 6s nausea, 5s weakness, 5s mining fatigue II, & 5s slowness
-  - 25%: 7s nausea, 5s weakness, 5s mining fatigue II, 5s slowness II, 3s blindness, & 10s hunger X (~1.5🍗)
+  - 25%: 7s nausea, 5s weakness, 5s mining fatigue II, 5s slowness II, 3s blindness, & 10s hunger X (~1.5🍗) (hunger is not applied if current food is 3 or less)
 - every 3m:
   - 75%: 3s poison (1♥)
   - 25%: 4s poison (1 1/2♥)

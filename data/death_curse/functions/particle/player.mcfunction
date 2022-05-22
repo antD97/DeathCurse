@@ -29,7 +29,10 @@
 # Creates particle effects for the player executor
 
 #!find=effect
-#!replace=deaths_increase|deaths_decrease|fatigue1|fatigue2|fatigue3|cloaking|poison
+#!replace=deaths_increase\
+    #! |deaths_decrease1|deaths_decrease2|deaths_decrease3\
+    #! |fatigue1|fatigue2|fatigue3|cloaking|poison\
+    #! |res_abom_effect1|res_abom_effect2|res_abom_effect3|smoke
 execute as @s[scores={__effect=1}] positioned as @s run function __:particle/player/effect
 
 # mob aggression
@@ -50,6 +53,9 @@ execute if score global __result1 matches 9 positioned as @s run particle minecr
 # Creates the fatigue2 particle effects for the player executor
 #! __:particle/player/fatigue2
 {
+    execute as @s[scores={__level=1}] run particle minecraft:entity_effect ~ ~ ~ 170 0 0 255 0
+    execute as @s[scores={__level=2}] run particle minecraft:entity_effect ~ ~ ~ 153 0 0 255 0
+    execute as @s[scores={__level=3}] run particle minecraft:entity_effect ~ ~ ~ 136 0 0 255 0
     execute as @s[scores={__level=4}] run particle minecraft:entity_effect ~ ~ ~ 119 0 0 255 0
     execute as @s[scores={__level=5}] run particle minecraft:entity_effect ~ ~ ~ 102 0 0 255 0
     execute as @s[scores={__level=6}] run particle minecraft:entity_effect ~ ~ ~ 85 0 0 255 0
@@ -101,4 +107,47 @@ execute if score global __result1 matches 9 positioned as @s run particle minecr
     execute as @s[scores={__level=9}] run particle minecraft:entity_effect ~ ~ ~ 34 0 0 255 0
     #!5x
     execute as @s[scores={__level=10..}] run particle minecraft:entity_effect ~ ~ ~ 1 0 0 255 0
+}
+
+# res. abom. effect 1 particles
+#! __:particle/player/res_abom_effect1
+{
+    particle minecraft:ash ~ ~0.9 ~ 0.15 0.45 0.15 0 2
+}
+
+# res. abom. effect 2 particles
+#! __:particle/player/res_abom_effect2
+{
+    particle minecraft:falling_obsidian_tear ~ ~0.9 ~ 0.15 0.45 0.15 0 1
+}
+
+# res. abom. effect 3 particles
+#! __:particle/player/res_abom_effect3
+{
+    particle minecraft:enchant ~ ~0.9 ~ 0.15 0.45 0.15 0 1
+}
+
+#! __:particle/player/deaths_decrease1
+{
+    #!5x
+    particle minecraft:entity_effect ~ ~ ~ 0 0 0 1 1
+}
+
+#! __:particle/player/deaths_decrease2
+{
+    #!10x
+    particle minecraft:entity_effect ~ ~ ~ 0 0 0 1 1
+}
+
+#! __:particle/player/deaths_decrease3
+{
+    #!15x
+    particle minecraft:entity_effect ~ ~ ~ 0 0 0 1 1
+}
+
+#! __:particle/player/smoke
+{
+    particle minecraft:cloud ~ ~-0.5 ~ 0.25 0.25 0.25 0 3 force
+    #!3x
+    particle minecraft:ambient_entity_effect ~ ~ ~ 0 0 0 1 1
 }

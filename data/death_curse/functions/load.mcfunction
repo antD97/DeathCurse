@@ -12,6 +12,7 @@ scoreboard objectives add __time_alive minecraft.custom:time_since_death
 # used to track a players change in curse level
 scoreboard objectives add __prev_level dummy
 scoreboard objectives add __hp health
+scoreboard objectives add __food food
 
 # trigger for the death curse introduction message
 scoreboard objectives add __intro trigger
@@ -19,6 +20,8 @@ scoreboard objectives add __intro trigger
 scoreboard objectives add __introduced dummy
 # trigger to give the player a death curse book
 scoreboard objectives add __give_book trigger
+# trigger for sending curse level message
+scoreboard objectives add __curse_level trigger
 # keeps track of how many times the player has been given a death curse book
 scoreboard objectives add __n_books dummy
 
@@ -36,10 +39,18 @@ scoreboard objectives add __effect_offset4 dummy
 scoreboard objectives add __deaths_increase dummy
 # used to keep track of the death increase particle effect duration
 scoreboard objectives add __deaths_increase_end dummy
-# death decrease particle effect mark
-scoreboard objectives add __deaths_decrease dummy
-# used to keep track of the death decrease particle effect duration
-scoreboard objectives add __deaths_decrease_end dummy
+# death decrease 1 particle effect mark
+scoreboard objectives add __deaths_decrease1 dummy
+# used to keep track of the death decrease 1 particle effect duration
+scoreboard objectives add __deaths_decrease1_end dummy
+# death decrease 2 particle effect mark
+scoreboard objectives add __deaths_decrease2 dummy
+# used to keep track of the death decrease 2 particle effect duration
+scoreboard objectives add __deaths_decrease2_end dummy
+# death decrease 3 particle effect mark
+scoreboard objectives add __deaths_decrease3 dummy
+# used to keep track of the death decrease 3 particle effect duration
+scoreboard objectives add __deaths_decrease3_end dummy
 
 # used to mark players with fatigue particle effect
 scoreboard objectives add __fatigue1 dummy
@@ -110,6 +121,29 @@ scoreboard objectives add __curse_cookie1_effect_end dummy
 scoreboard objectives add __curse_cookie2_effect_end dummy
 scoreboard objectives add __curse_cookie3_effect_end dummy
 
+# player holding resurrection abomination detection
+scoreboard objectives add __holding_res_abom1 dummy
+scoreboard objectives add __holding_res_abom2 dummy
+scoreboard objectives add __holding_res_abom3 dummy
+# player eaten beetroot soup
+scoreboard objectives add __eaten_beetroot_soup minecraft.used:minecraft.beetroot_soup
+# player res abom. effects
+scoreboard objectives add __res_abom_effect1 dummy
+scoreboard objectives add __res_abom_effect2 dummy
+scoreboard objectives add __res_abom_effect3 dummy
+
+# jitter effect
+scoreboard objectives add __jitter_effect dummy
+scoreboard objectives add __jitter_effect_end dummy
+
+# smoke effect
+scoreboard objectives add __smoke dummy
+# strike effect
+scoreboard objectives add __strike dummy
+
+# detect player sleeping
+scoreboard objectives add __sleeping minecraft.custom:minecraft.sleep_in_bed
+
 # temporary values used for function arguments or arithmetic
 scoreboard objectives add __arg1 dummy
 scoreboard objectives add __arg2 dummy
@@ -118,6 +152,7 @@ scoreboard objectives add __result1 dummy
 scoreboard objectives add __result2 dummy
 
 # global timers
+schedule function __:timer/1t 1t
 schedule function __:timer/2t 2t
 schedule function __:timer/10t 10t
 schedule function __:timer/1s 1s

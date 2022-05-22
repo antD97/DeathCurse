@@ -37,7 +37,8 @@ execute if score global __result1 matches 0 run function __:curse/effect_group/l
         effect give @s minecraft:mining_fatigue 5 1 true
         effect give @s minecraft:slowness 5 1 true
         effect give @s minecraft:blindness 3 0 true
-        effect give @s minecraft:hunger 10 9 true
+        # not if food is 3 or less
+        execute as @s[scores={__food=7..}] run effect give @s minecraft:hunger 10 9 true
 
         execute positioned as @s run playsound minecraft:ambient.warped_forest.mood ambient @s ~ ~1000 ~ 100000
 

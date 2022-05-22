@@ -8,7 +8,7 @@
 #! __:util/random
 {
     summon marker ~ ~ ~ {Tags:["__random_uuid"]}
-    execute store result score global __result1 run data get entity @e[type=marker,tag=random_uuid,limit=1] UUID[0] 1
+    execute store result score global __result1 run data get entity @e[type=marker,tag=__random_uuid,limit=1] UUID[0] 1
     #!sb global __result1 %= global __arg1
-    kill @e[type=marker,tag=random_uuid]
+    kill @e[type=marker,tag=__random_uuid]
 }

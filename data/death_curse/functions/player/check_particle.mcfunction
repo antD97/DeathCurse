@@ -11,12 +11,28 @@ execute if score @s __deaths_increase matches 1.. run function __:player/check_p
     execute if score global __result1 matches ..0 run scoreboard players set @s __deaths_increase 0
 }
 
-# Check deaths decrease effect scores
-execute if score @s __deaths_decrease matches 1.. run function __:player/check_particle/deaths_decrease
+# Check deaths decrease1 effect scores
+execute if score @s __deaths_decrease1 matches 1 run function __:player/check_particle/deaths_decrease1
 {
-    scoreboard players operation global __result1 = @s __deaths_decrease_end
+    scoreboard players operation global __result1 = @s __deaths_decrease1_end
     scoreboard players operation global __result1 -= global __effect_timer
-    execute if score global __result1 matches ..0 run scoreboard players set @s __deaths_decrease 0
+    execute if score global __result1 matches ..0 run scoreboard players set @s __deaths_decrease1 0
+}
+
+# Check deaths decrease2 effect scores
+execute if score @s __deaths_decrease2 matches 1 run function __:player/check_particle/deaths_decrease2
+{
+    scoreboard players operation global __result1 = @s __deaths_decrease2_end
+    scoreboard players operation global __result1 -= global __effect_timer
+    execute if score global __result1 matches ..0 run scoreboard players set @s __deaths_decrease2 0
+}
+
+# Check deaths decrease3 effect scores
+execute if score @s __deaths_decrease3 matches 1 run function __:player/check_particle/deaths_decrease3
+{
+    scoreboard players operation global __result1 = @s __deaths_decrease3_end
+    scoreboard players operation global __result1 -= global __effect_timer
+    execute if score global __result1 matches ..0 run scoreboard players set @s __deaths_decrease3 0
 }
 
 # Check fatigue 1 effect scores
@@ -111,3 +127,19 @@ execute if score @s __curse_cookie3_effect matches 1.. run function __:player/ch
     execute if score global __result1 matches 1 run title @s actionbar {"text":"Curse Reduction III ends in 1 second...","italic":true}
     execute if score global __result1 matches ..0 run scoreboard players set @s __curse_cookie3_effect 0
 }
+
+# Check jitter effect scores
+execute if score @s __jitter_effect matches 1.. run function __:player/check_particle/check_jitter
+{
+    scoreboard players operation global __result1 = @s __jitter_effect_end
+    scoreboard players operation global __result1 -= global __effect_timer
+    execute if score global __result1 matches ..0 run scoreboard players set @s __jitter_effect 0
+}
+
+# disable smoke effect if no longer res. abom. effected, or dead
+#!sb global __arg1 = 0
+#!find=effect1
+#!replace=effect1|effect2|effect3
+execute if score @s __res_abom_effect1 matches 1.. run scoreboard players set global __arg1 1
+execute if score global __arg1 matches 0 run scoreboard players set @s __smoke 0
+execute if score @s __time_alive matches 0 run scoreboard players set @s __smoke 0

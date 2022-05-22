@@ -1,7 +1,7 @@
 # Copyright © 2022 antD97
 # Licensed under the MIT License https://antD.mit-license.org/
 
-# applies level 8 curse effects
+# applies level 10 curse effects
 
 # 30s ((effect timer + offset1) % 30): nausea 1
 #!sb global __result1 = global __effect_timer
