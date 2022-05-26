@@ -15,7 +15,7 @@
 # player ate a beetroot_soup and is holding a res. abom. 1
 execute as @s[scores={__eaten_beetroot_soup=1..,__holding_res_abom1=1..}] run function __:player/ate_res_abom1
 {
-    playsound minecraft:entity.ghast.hurt ambient @s ~ ~1000 ~ 100000 0.7
+    execute positioned as @a run playsound minecraft:entity.ghast.hurt ambient @a ~ ~ ~ 1 0.7
 
     # clear bowl (technially not perfect, but it's fine)
     clear @s minecraft:bowl 1
@@ -30,7 +30,7 @@ execute as @s[scores={__eaten_beetroot_soup=1..,__holding_res_abom1=1..}] run fu
     # has deaths and is not under the effects of res. abom. 1-3
     execute as @s[scores={__deaths=1..,__res_abom_effect1=0,__res_abom_effect2=0,__res_abom_effect3=0}] run function __:player/apply_res_abom1
     {
-        title @s actionbar {"text":"You feel uneasy","italic":true,"bold":true,"color":"#AA0000"}
+        title @s actionbar {"text":"The ritual has begun","italic":true,"bold":true,"color":"#AA0000"}
         #!sb @s __res_abom_effect1 = 1
     }
 }
@@ -38,7 +38,7 @@ execute as @s[scores={__eaten_beetroot_soup=1..,__holding_res_abom1=1..}] run fu
 # player ate a beetroot_soup and is holding a res. abom. 2
 execute as @s[scores={__eaten_beetroot_soup=1..,__holding_res_abom2=1..}] run function __:player/ate_res_abom2
 {
-    playsound minecraft:entity.ghast.hurt ambient @s ~ ~1000 ~ 100000 0.6
+    execute positioned as @s run playsound minecraft:entity.ghast.hurt ambient @a ~ ~ ~ 1 0.6
 
     # clear bowl (technially not perfect, but it's fine)
     clear @s minecraft:bowl 1
@@ -53,17 +53,20 @@ execute as @s[scores={__eaten_beetroot_soup=1..,__holding_res_abom2=1..}] run fu
     # has deaths and is not under the effects of res. abom. 2-3
     execute as @s[scores={__deaths=1..,__res_abom_effect2=0,__res_abom_effect3=0}] run function __:player/apply_res_abom2
     {
-        title @s actionbar {"text":"You feel dread","italic":true,"bold":true,"color":"#440000"}
+        title @s actionbar ["",{"text":"Th","bold":true,"italic":true,"color":"#440000"},{"text":"e","bold":true,"italic":true,"obfuscated":true,"color":"#440000"},{"text":" ritual has b","bold":true,"italic":true,"color":"#440000"},{"text":"e","bold":true,"italic":true,"obfuscated":true,"color":"#440000"},{"text":"gun","bold":true,"italic":true,"color":"#440000"}]
         # overwrite res. abom. 1 if need be
         #!sb @s __res_abom_effect1 = 0
         #!sb @s __res_abom_effect2 = 1
     }
+
+    # advancement
+    advancement grant @s only death_curse:eat_abomination
 }
 
 # player ate a beetroot_soup and is holding a res. abom. 3
 execute as @s[scores={__eaten_beetroot_soup=1..,__holding_res_abom3=1..}] run function __:player/ate_res_abom3
 {
-        playsound minecraft:entity.ghast.hurt ambient @s ~ ~1000 ~ 100000 0.5
+    execute positioned as @s run playsound minecraft:entity.ghast.hurt ambient @a ~ ~ ~ 1 0.5
         
     # clear bowl (technially not perfect, but it's fine)
     clear @s minecraft:bowl 1
@@ -76,12 +79,15 @@ execute as @s[scores={__eaten_beetroot_soup=1..,__holding_res_abom3=1..}] run fu
     # has deaths and is not under the effects of res. abom. 3
     execute as @s[scores={__deaths=1..,__res_abom_effect3=0}] run function __:player/apply_res_abom3
     {
-        title @s actionbar {"text":"You feel terrified","italic":true,"bold":true,"color":"#000000"}
+        title @s actionbar ["",{"text":"Th","bold":true,"italic":true,"color":"black"},{"text":"e","bold":true,"italic":true,"obfuscated":true,"color":"black"},{"text":" rit","bold":true,"italic":true,"color":"black"},{"text":"ua","bold":true,"italic":true,"obfuscated":true,"color":"black"},{"text":"l ","bold":true,"italic":true,"color":"black"},{"text":"h","bold":true,"italic":true,"obfuscated":true,"color":"black"},{"text":"as b","bold":true,"italic":true,"color":"black"},{"text":"eg","bold":true,"italic":true,"obfuscated":true,"color":"black"},{"text":"un","bold":true,"italic":true,"color":"black"}]
         # overwrite res. abom. 1-2 if need be
         #!sb @s __res_abom_effect1 = 0
         #!sb @s __res_abom_effect2 = 0
         #!sb @s __res_abom_effect3 = 1
     }
+
+    # advancement
+    advancement grant @s only death_curse:eat_abomination
 }
 
 # decay holding res. abom. timer

@@ -1,0 +1,16 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:cookie",
+            "nbt": "{CustomModelData:379305,Enchantments:[]}"
+        },
+        "title": "Cookie Monster",
+        "description": ["",{"text": "Be ","italic": false},{"text": "incredibly","italic": true},{"text": " persistent for a couple of cookies","italic": false}],
+        "frame": "challenge",
+        "hidden": true
+    },
+    "criteria": {
+        "none": { "trigger": "impossible" }
+    },
+    "parent": "death_curse:cookie3"
+}

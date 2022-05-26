@@ -13,11 +13,11 @@ execute as @a[scores={__intro=1..}] run function __:player/intro
 #!sb @a __intro = 0
 
 # give death book trigger
-execute as @a[scores={__give_book=1..}] run function __:player/give_book
-#!sb enable @a __give_book
-#!sb @a __give_book = 0
+execute as @a[scores={__book=1..}] run function __:player/give_book
+#!sb enable @a __book
+#!sb @a __book = 0
 
 # curse level trigger
-execute as @a[scores={__curse_level=1..}] run function __:player/curse_level
-#!sb enable @a __curse_level
-#!sb @a __curse_level = 0
+execute as @a[scores={__level=1..}] run function __:player/curse_level
+#!sb enable @a __level
+#!sb @a __level = 0

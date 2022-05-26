@@ -1,0 +1,25 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:cookie",
+            "nbt": "{CustomModelData:379305}"
+        },
+        "title": "Cookie Fanatic",
+        "description": "Obtain a Curse Cookie III"
+    },
+    "criteria": {
+        "get_cookie3": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "count": 1,
+                        "items": ["minecraft:cookie"],
+                        "nbt": "{display:{Name:'{\"text\":\"Curse Cookie III\",\"color\":\"#000000\",\"bold\":true,\"italic\":true}',Lore:['{\"text\":\"-11 Death Curse Levels for 30m\"}']},CustomModelData:379305}"
+                    }
+                ]
+            }
+        }
+    },
+    "parent": "death_curse:cookie2"
+}

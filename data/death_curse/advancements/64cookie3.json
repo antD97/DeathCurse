@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:cookie",
+            "nbt": "{CustomModelData:379305,Enchantments:[]}"
+        },
+        "title": "Cookie Machine",
+        "description": {"text": "Collect a stack of Curse Cookie IIIs","color": "purple"},
+        "frame": "challenge"
+    },
+    "criteria": {
+        "get_64cookie3": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "count": 64,
+                        "items": ["minecraft:cookie"],
+                        "nbt": "{display:{Name:'{\"text\":\"Curse Cookie III\",\"color\":\"#000000\",\"bold\":true,\"italic\":true}',Lore:['{\"text\":\"-11 Death Curse Levels for 30m\"}']},CustomModelData:379305}"
+                    }
+                ]
+            }
+        }
+    },
+    "parent": "death_curse:cookie3"
+}

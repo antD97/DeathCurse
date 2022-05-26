@@ -1,6 +1,6 @@
 {
     "pack": {
         "pack_format": 9,
-        "description": {"text":"Death penalties","color":"dark_red"}
+        "description": [[""],{"text":"The ","color": "reset"},{"text":"Death Curse","color":"#aa0000"}]
     }
 }

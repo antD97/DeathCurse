@@ -1,0 +1,25 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:cookie",
+            "nbt": "{CustomModelData:379304}"
+        },
+        "title": "Cookie Chemistry",
+        "description": "Obtain a Curse Cookie II"
+    },
+    "criteria": {
+        "get_cookie2": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "count": 1,
+                        "items": ["minecraft:cookie"],
+                        "nbt": "{display:{Name:'{\"text\":\"Curse Cookie II\",\"color\":\"#440000\",\"bold\":true,\"italic\":true}',Lore:['{\"text\":\"-3 Death Curse Levels for 30m\"}']},CustomModelData:379304}"
+                    }
+                ]
+            }
+        }
+    },
+    "parent": "death_curse:cookie1"
+}

@@ -1,0 +1,15 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:beetroot_soup",
+            "nbt": "{CustomModelData:379307,Enchantments:[{}]}"
+        },
+        "title": "Has Science Gone Too Far?",
+        "description": "Complete a Resurrection Ritual II",
+        "hidden": true
+    },
+    "criteria": {
+        "none": { "trigger": "impossible" }
+    },
+    "parent": "death_curse:resurrection1"
+}

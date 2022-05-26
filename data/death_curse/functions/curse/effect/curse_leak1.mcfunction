@@ -23,7 +23,7 @@ execute if score global __result1 matches 0 as @e[type=minecraft:blaze] run func
 execute if score global __result1 matches 0 as @e[type=minecraft:cave_spider] run function __:curse/effect/curse_leak1/mark_hostile
 
 # cloak a random hostile mob
-#!sb global __arg2 = @s __level
+#!sb global __arg2 = @s __curse_level
 execute if score global __result1 matches 0 as @e[scores={__hostile=1},sort=random,limit=1] run function __:hostile/effect/cloak1
 
 # remove hostile mark

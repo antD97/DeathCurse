@@ -1,0 +1,15 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:beetroot_soup",
+            "nbt": "{CustomModelData:379308,Enchantments:[{}]}"
+        },
+        "title": "Defying Gods",
+        "description": "Complete a Resurrection Ritual III",
+        "frame": "challenge"
+    },
+    "criteria": {
+        "none": { "trigger": "impossible" }
+    },
+    "parent": "death_curse:resurrection2"
+}

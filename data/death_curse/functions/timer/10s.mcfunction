@@ -48,24 +48,27 @@ execute store result score global __result1 run time query daytime
 execute if entity @a[scores={__res_abom_effect1=1..}] run scoreboard players set global __result2 1
 
 # if between sunset & midnight and someone ate a res. abom., make it thunder
-execute if score global __result2 matches 1 run execute if score global __result1 matches 12001..18005 run weather thunder
+execute if score global __result2 matches 1 run execute if score global __result1 matches 12001..18005 run weather thunder 0
 
 # if any other time and someone ate a res. abom., make it rain
 #!find=0..12000
 #!replace=0..12000|18006..24000
-execute if score global __result2 matches 1 run execute if score global __result1 matches 0..12000 run weather rain
+execute if score global __result2 matches 1 run execute if score global __result1 matches 0..12000 run weather rain 0
 
 # random effects for res. abom. effect players
 #!find=effect1
 #!replace=effect1|effect2|effect3
 execute as @a[scores={__res_abom_effect1=1}] run function __:player/res_abom_ambient_slow
 {
-    #!sb global __arg1 = 20
+    #!sb global __arg1 = 10
     function __:util/random
 
     # 20% random creepy sound and jitter
-    execute positioned as @s rotated as @s if score global __result1 matches 0..3 run function __:player/random_creepy_sound
+    execute positioned as @s rotated as @s if score global __result1 matches 0..1 run function __:player/random_creepy_sound
     {
+        # save previous random value
+        #!sb global __result2 = global __result1
+
         #!sb global __arg1 = 6
         function __:util/random
         execute if score global __result1 matches 0 run playsound minecraft:entity.strider.ambient ambient @s ^2 ^ ^
@@ -80,17 +83,20 @@ execute as @a[scores={__res_abom_effect1=1}] run function __:player/res_abom_amb
         execute if score global __result1 matches 4 run tp @s ~ ~ ~ ~1 ~
         execute if score global __result1 matches 5 run playsound minecraft:entity.strider.hurt ambient @s ^-2 ^ ^
         execute if score global __result1 matches 5 run tp @s ~ ~ ~ ~-1 ~
+
+        # restore previous random value
+        #!sb global __result1 = global __result2
     }
 
-    # res. abom. effect 2-3: 5% jitter effect
+    # res. abom. effect 2-3: 10% jitter effect
     #!find=effect2
     #!replace=effect2|effect3
-    execute as @s[scores={__res_abom_effect2=1}] positioned as @s rotated as @s if score global __result1 matches 4 run function __:player/res_abom_jitter
+    execute as @s[scores={__res_abom_effect2=1}] positioned as @s rotated as @s if score global __result1 matches 2 run function __:player/res_abom_jitter
     {
         effect give @s minecraft:slowness 10 0 true
 
         # sound
-        execute positioned as @s run playsound minecraft:ambient.basalt_deltas.additions ambient @s ~ ~1000 ~ 100000
+        execute positioned as @s run playsound minecraft:ambient.basalt_deltas.additions ambient @s ~ ~10000 ~ 100000000 1 1
 
         # jitter effect
         scoreboard players set @s __jitter_effect 1
@@ -98,8 +104,8 @@ execute as @a[scores={__res_abom_effect1=1}] run function __:player/res_abom_amb
         scoreboard players add @s __jitter_effect_end 10
     }
 
-    # res. abom. effect 3: 5% fearish effect
-    execute as @s[scores={__res_abom_effect3=1}] positioned as @s rotated as @s if score global __result1 matches 5 run function __:player/res_abom_fear
+    # res. abom. effect 3: 10% fearish effect
+    execute as @s[scores={__res_abom_effect3=1}] positioned as @s rotated as @s if score global __result1 matches 3 run function __:player/res_abom_fear
     {
         effect give @s minecraft:jump_boost 5 200 true
         effect give @s minecraft:slowness 5 255 true

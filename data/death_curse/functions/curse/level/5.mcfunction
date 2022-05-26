@@ -27,28 +27,35 @@ execute if score global __result1 matches 0 run function __:curse/effect_group/l
 
 execute if score global __result1 matches 0 run function __:curse/effect/poison1
 {
-    # random
-    #!sb global __arg1 = 4
-    function __:util/random
-
-    # 75%: 2s poison
-    execute if score global __result1 matches 0..2 run effect give @s minecraft:poison 2 0 true
-
-    # 25%: 3s poison
-    execute if score global __result1 matches 3 run function __:curse/effect/helper/poison1_heavy
+    # hp is 8+ (4+ hearts)
+    execute as @s[scores={__hp=8..}] run function __:curse/effect/helper/poison1_good_hp
     {
-        # 3s poison effect
-        effect give @s minecraft:poison 3 0 true
+        # random
+        #!sb global __arg1 = 4
+        function __:util/random
 
-        # witch laughter
-        execute positioned as @s run playsound minecraft:entity.witch.celebrate ambient @s ~ ~1000 ~ 100000
+        # 75%: 2s poison
+        execute if score global __result1 matches 0..2 run effect give @s minecraft:poison 2 0 true
 
-        # enable particle effect
-        #!sb @s __poison = 1
-        # set particle effect end time
-        #!sb @s __poison_end = global __effect_timer
-        scoreboard players add @s __poison_end 2
+        # 25%: 3s poison
+        execute if score global __result1 matches 3 run function __:curse/effect/helper/poison1_heavy
+        {
+            # 3s poison effect
+            effect give @s minecraft:poison 3 0 true
+
+            # witch laughter
+            execute positioned as @s run playsound minecraft:entity.witch.celebrate ambient @s ~ ~10000 ~ 100000000 1 1
+
+            # enable particle effect
+            #!sb @s __poison = 1
+            # set particle effect end time
+            #!sb @s __poison_end = global __effect_timer
+            scoreboard players add @s __poison_end 2
+        }
     }
+
+    # hp is 7 (3.5 hearts)
+    execute as @s[scores={__hp=7}] run effect give @s minecraft:poison 2 0 true
 }
 
 # 5m ((effect timer + offset4) % 300): curse leak 1

@@ -1,0 +1,25 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:enchanted_book",
+            "nbt": "{CustomModelData:379300}"
+        },
+        "title": "A Worthwhile Investment",
+        "description": "Obtain a Curse Ward I"
+    },
+    "criteria": {
+        "get_ward1": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "count": 1,
+                        "items": ["minecraft:enchanted_book"],
+                        "nbt": "{display:{Name:'{\"text\":\"Curse Ward I\",\"color\":\"#AA0000\",\"bold\":true,\"italic\":true}',Lore:['{\"text\":\"-1 Death Curse Level\"}']},CustomModelData:379300}"
+                    }
+                ]
+            }
+        }
+    },
+    "parent": "death_curse:root"
+}

@@ -56,4 +56,8 @@ execute as @a[scores={__jitter_effect=1}] run function __:player/jitter
 }
 
 # strike with lightning
-execute as @a[scores={__strike=1,__time_alive=1..}] run execute positioned as @s run summon minecraft:lightning_bolt
+# didn't end up using different strike levels, but the option is there
+execute as @a[scores={__strike=1..,__time_alive=1..}] run execute positioned as @s run summon minecraft:lightning_bolt
+execute as @e[type=minecraft:skeleton,scores={__strike=1..}] run execute positioned as @s run summon minecraft:lightning_bolt
+execute as @e[type=minecraft:wither_skeleton,scores={__strike=1..}] run execute positioned as @s run summon minecraft:lightning_bolt
+execute as @e[type=minecraft:ghast,scores={__strike=1..}] run execute positioned as @s run summon minecraft:lightning_bolt

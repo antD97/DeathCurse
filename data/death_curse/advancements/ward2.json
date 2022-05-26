@@ -1,0 +1,25 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:enchanted_book",
+            "nbt": "{CustomModelData:379301}"
+        },
+        "title": "An Endothermic Reaction",
+        "description": "Obtain a Curse Ward II"
+    },
+    "criteria": {
+        "get_ward2": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "count": 1,
+                        "items": ["minecraft:enchanted_book"],
+                        "nbt": "{display:{Name:'{\"text\":\"Curse Ward II\",\"color\":\"#440000\",\"bold\":true,\"italic\":true}',Lore:['{\"text\":\"-3 Death Curse Levels\"}']},CustomModelData:379301}"
+                    }
+                ]
+            }
+        }
+    },
+    "parent": "death_curse:ward1"
+}

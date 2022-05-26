@@ -3,6 +3,8 @@
 
 # Applys on death effect to the executing player
 
+execute if score @s __deaths matches 1.. run advancement grant @s only __:root
+
 # store if decreased deaths in global __arg1
 #!sb global __arg1 = 0
 #!find=decrease1
@@ -68,67 +70,67 @@ execute if score global __arg1 matches 1 as @s[scores={__deaths=0}] run function
 {
     title @s title {"text":"Free of Death Curse","color":"#46ffd3"}
     title @s subtitle {"text":"-nausea","color":"#46ffd3"}
-    playsound minecraft:ui.toast.challenge_complete ambient @s ~ ~1000 ~ 100000 1.0
+    playsound minecraft:ui.toast.challenge_complete ambient @s ~ ~10000 ~ 100000000 1.0 1
 }
 execute if score global __arg1 matches 1 as @s[scores={__deaths=1}] run function __:player/d_title/1
 {
     title @s title {"text":"Death Curse I","color":"#22D3A9"}
     title @s subtitle {"text":"+\u2665 -fatigue","color":"#22D3A9"}
-    playsound minecraft:ui.toast.challenge_complete ambient @s ~ ~1000 ~ 100000 0.95
+    playsound minecraft:ui.toast.challenge_complete ambient @s ~ ~10000 ~ 100000000 0.95 1
 }
 execute if score global __arg1 matches 1 as @s[scores={__deaths=2}] run function __:player/d_title/2
 {
     title @s title {"text":"Death Curse II","color":"#1FC19B"}
     title @s subtitle {"text":"-curse leak","color":"#1FC19B"}
-    playsound minecraft:ui.toast.challenge_complete ambient @s ~ ~1000 ~ 100000 0.9
+    playsound minecraft:ui.toast.challenge_complete ambient @s ~ ~10000 ~ 100000000 0.9 1
 }
 execute if score global __arg1 matches 1 as @s[scores={__deaths=3}] run function __:player/d_title/3
 {
     title @s title {"text":"Death Curse III","color":"#1DAF8D"}
     title @s subtitle {"text":"+\u2665 -nausea -fatigue","color":"#1DAF8D"}
-    playsound minecraft:ui.toast.challenge_complete ambient @s ~ ~1000 ~ 100000 0.85
+    playsound minecraft:ui.toast.challenge_complete ambient @s ~ ~10000 ~ 100000000 0.85 1
 }
 execute if score global __arg1 matches 1 as @s[scores={__deaths=4}] run function __:player/d_title/4
 {
     title @s title {"text":"Death Curse IV","color":"#1A9E7F"}
     title @s subtitle {"text":"-poison","color":"#1A9E7F"}
-    playsound minecraft:ui.toast.challenge_complete ambient @s ~ ~1000 ~ 100000 0.8
+    playsound minecraft:ui.toast.challenge_complete ambient @s ~ ~10000 ~ 100000000 0.8 1
 }
 execute if score global __arg1 matches 1 as @s[scores={__deaths=5}] run function __:player/d_title/5
 {
     title @s title {"text":"Death Curse V","color":"#16886E"}
     title @s subtitle {"text":"+\u2665 -curse leak","color":"#16886E"}
-    playsound minecraft:ui.toast.challenge_complete ambient @s ~ ~1000 ~ 100000 0.75
+    playsound minecraft:ui.toast.challenge_complete ambient @s ~ ~10000 ~ 100000000 0.75 1
 }
 execute if score global __arg1 matches 1 as @s[scores={__deaths=6}] run function __:player/d_title/6
 {
     title @s title {"text":"Death Curse VI","color":"#12725C"}
     title @s subtitle {"text":"-fatigue","color":"#12725C"}
-    playsound minecraft:ui.toast.challenge_complete ambient @s ~ ~1000 ~ 100000 0.7
+    playsound minecraft:ui.toast.challenge_complete ambient @s ~ ~10000 ~ 100000000 0.7 1
 }
 execute if score global __arg1 matches 1 as @s[scores={__deaths=7}] run function __:player/d_title/7
 {
     title @s title {"text":"Death Curse VII","color":"#0F614E"}
     title @s subtitle {"text":"+\u2665 +poison","color":"#0F614E"}
-    playsound minecraft:ui.toast.challenge_complete ambient @s ~ ~1000 ~ 100000 0.65
+    playsound minecraft:ui.toast.challenge_complete ambient @s ~ ~10000 ~ 100000000 0.65 1
 }
 execute if score global __arg1 matches 1 as @s[scores={__deaths=8}] run function __:player/d_title/8
 {
     title @s title {"text":"Death Curse VIII","color":"#0c4b3c"}
     title @s subtitle {"text":"-mob aggression","color":"#0c4b3c"}
-    playsound minecraft:ui.toast.challenge_complete ambient @s ~ ~1000 ~ 100000 0.6
+    playsound minecraft:ui.toast.challenge_complete ambient @s ~ ~10000 ~ 100000000 0.6 1
 }
 execute if score global __arg1 matches 1 as @s[scores={__deaths=9}] run function __:player/d_title/9
 {
     title @s title {"text":"Death Curse IX","color":"#062921"}
     title @s subtitle {"text":"+\u2665 -fear","color":"#062921"}
-    playsound minecraft:ui.toast.challenge_complete ambient @s ~ ~1000 ~ 100000 0.55
+    playsound minecraft:ui.toast.challenge_complete ambient @s ~ ~10000 ~ 100000000 0.55 1
 }
 execute if score global __arg1 matches 1 as @s[scores={__deaths=10..}] run function __:player/d_title/10
 {
     title @s title {"text":"Death Curse X","color":"#000000"}
     title @s subtitle [[""],{"text":"no cha","color":"#000000"},{"text":"n","color":"#000000","obfuscated":true},{"text":"ge","color":"#000000"}]
-    playsound minecraft:ui.toast.challenge_complete ambient @s ~ ~1000 ~ 100000 0.5
+    playsound minecraft:ui.toast.challenge_complete ambient @s ~ ~10000 ~ 100000000 0.5 1
 }
 
 # max health
@@ -141,9 +143,9 @@ execute as @s[scores={__deaths=10..}] run attribute @s minecraft:generic.max_hea
 effect give @s minecraft:instant_health
 
 # sounds
-execute if score global __arg1 matches 0 as @s[scores={__deaths=1..3}] positioned as @s run playsound minecraft:ambient.crimson_forest.mood ambient @s ~ ~1000 ~ 100000
-execute if score global __arg1 matches 0 as @s[scores={__deaths=4..6}] positioned as @s run playsound minecraft:ambient.soul_sand_valley.mood ambient @s ~ ~1000 ~ 100000
-execute if score global __arg1 matches 0 as @s[scores={__deaths=7..}] positioned as @s run playsound minecraft:ambient.cave ambient @s ~ ~1000 ~ 100000
+execute if score global __arg1 matches 0 as @s[scores={__deaths=1..3}] positioned as @s run playsound minecraft:ambient.crimson_forest.mood ambient @s ~ ~10000 ~ 100000000 1 1
+execute if score global __arg1 matches 0 as @s[scores={__deaths=4..6}] positioned as @s run playsound minecraft:ambient.soul_sand_valley.mood ambient @s ~ ~10000 ~ 100000000 1 1
+execute if score global __arg1 matches 0 as @s[scores={__deaths=7..}] positioned as @s run playsound minecraft:ambient.cave ambient @s ~ ~10000 ~ 100000000 1 1
 
 # particles
 execute if score global __arg1 matches 0 run function __:player/apply_deaths_increase_effect

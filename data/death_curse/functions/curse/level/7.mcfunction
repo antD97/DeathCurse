@@ -40,7 +40,7 @@ execute if score global __result1 matches 0 run function __:curse/effect_group/l
         # not if food is 3 or less
         execute as @s[scores={__food=7..}] run effect give @s minecraft:hunger 10 9 true
 
-        execute positioned as @s run playsound minecraft:ambient.warped_forest.mood ambient @s ~ ~1000 ~ 100000
+        execute positioned as @s run playsound minecraft:ambient.warped_forest.mood ambient @s ~ ~10000 ~ 100000000 1 1
 
         # enable particle effect
         #!sb @s __fatigue3 = 1

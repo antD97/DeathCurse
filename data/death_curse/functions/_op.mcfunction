@@ -17,12 +17,12 @@
     # level:
     # time alive:
     # hp:
-    tellraw @s ["",{"text":"deaths: "},{"score":{"name":"@s","objective":"__deaths"}},{"text":"\nlevel: "},{"score":{"name":"@s","objective":"__level"}},{"text":"\ntime alive: "},{"score":{"name":"@s","objective":"__time_alive"}},{"text":"\nhp: "},{"score":{"name":"@s","objective":"__hp"}},{"text":"\n "}]
+    tellraw @s ["",{"text":"deaths: "},{"score":{"name":"@s","objective":"__deaths"}},{"text":"\nlevel: "},{"score":{"name":"@s","objective":"__curse_level"}},{"text":"\ntime alive: "},{"score":{"name":"@s","objective":"__time_alive"}},{"text":"\nhp: "},{"score":{"name":"@s","objective":"__hp"}},{"text":"\n "}]
 
     # curse intro:
     # give book:
     # n books:
-    tellraw @s ["",{"text":"curse intro: "},{"score":{"name":"@s","objective":"__intro"}},{"text":"\ngive book: "},{"score":{"name":"@s","objective":"__give_book"}},{"text":"\nn books: "},{"score":{"name":"@s","objective":"__n_books"}},{"text":"\n "}]
+    tellraw @s ["",{"text":"curse intro: "},{"score":{"name":"@s","objective":"__intro"}},{"text":"\ngive book: "},{"score":{"name":"@s","objective":"__book"}},{"text":"\nn books: "},{"score":{"name":"@s","objective":"__n_books"}},{"text":"\n "}]
 
     # global effect timer:
     # effect offset1:
@@ -32,12 +32,9 @@
     tellraw @s ["",{"text":"global effect timer: "},{"score":{"name":"global","objective":"__effect_timer"}},{"text":"\neffect offset1: "},{"score":{"name":"@s","objective":"__effect_offset1"}},{"text":"\neffect offset2: "},{"score":{"name":"@s","objective":"__effect_offset2"}},{"text":"\neffect offset3: "},{"score":{"name":"@s","objective":"__effect_offset3"}},{"text":"\neffect offset4: "},{"score":{"name":"@s","objective":"__effect_offset4"}},{"text":"\n "}]
 
     # curse cookie 1:
-    # curse cookie 1 end:
     # curse cookie 2:
-    # curse cookie 2 end:
     # curse cookie 3:
-    # curse cookie 3 end:
-    tellraw @s ["",{"text":"curse cookie 1: "},{"score":{"name":"@s","objective":"__curse_cookie1_effect"}},{"text":"\ncurse cookie 1 end: "},{"score":{"name":"@s","objective":"__curse_cookie1_effect_end"}},{"text":"\ncurse cookie 2: "},{"score":{"name":"@s","objective":"__curse_cookie2_effect"}},{"text":"\ncurse cookie 2 end: "},{"score":{"name":"@s","objective":"__curse_cookie2_effect_end"}},{"text":"\ncurse cookie 3: "},{"score":{"name":"@s","objective":"__curse_cookie3_effect"}},{"text":"\ncurse cookie 3 end: "},{"score":{"name":"@s","objective":"__curse_cookie3_effect_end"}},{"text":"\n "}]
+    tellraw @s ["",{"text":"curse cookie 1: "},{"score":{"name":"@s","objective":"__curse_cookie1_effect"}},{"text":"\ncurse cookie 2: "},{"score":{"name":"@s","objective":"__curse_cookie2_effect"}},{"text":"\ncurse cookie 3: "},{"score":{"name":"@s","objective":"__curse_cookie3_effect"}},{"text":"\n "}]
 
     # res. abom. 1:
     # res. abom. 2:
@@ -54,7 +51,7 @@
     scoreboard objectives remove __id
 
     scoreboard objectives remove __deaths
-    scoreboard objectives remove __level
+    scoreboard objectives remove __curse_level
     scoreboard objectives remove __time_alive
     scoreboard objectives remove __prev_level
     scoreboard objectives remove __hp
@@ -62,8 +59,8 @@
 
     scoreboard objectives remove __intro
     scoreboard objectives remove __introduced
-    scoreboard objectives remove __give_book
-    scoreboard objectives remove __curse_level
+    scoreboard objectives remove __book
+    scoreboard objectives remove __level
     scoreboard objectives remove __n_books
 
     scoreboard objectives remove __effect_timer
@@ -120,9 +117,6 @@
     scoreboard objectives remove __curse_cookie1_effect
     scoreboard objectives remove __curse_cookie2_effect
     scoreboard objectives remove __curse_cookie3_effect
-    scoreboard objectives remove __curse_cookie1_effect_end
-    scoreboard objectives remove __curse_cookie2_effect_end
-    scoreboard objectives remove __curse_cookie3_effect_end
 
     scoreboard objectives remove __holding_res_abom1
     scoreboard objectives remove __holding_res_abom2
@@ -154,11 +148,7 @@
     schedule clear __:timer/1h
 
     kill @e[type=marker,tag=__player_lock]
-}
-
-# :)
-#! __:op/secret_feature
-{
-    say I'm a dumb idiot!
-    tellraw @s ["",{"text":"antD whispers to you: Gotcha! :)","italic":true,"color":"gray"}]
+    kill @e[type=skeleton,tag=__res_event1]
+    kill @e[type=wither_skeleton,tag=__res_event1]
+    kill @e[type=ghast,tag=__res_event1]
 }

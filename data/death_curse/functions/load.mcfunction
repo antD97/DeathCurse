@@ -7,7 +7,7 @@ scoreboard objectives add __id dummy
 
 scoreboard objectives add __deaths deathCount
 # score to track players' current curse level
-scoreboard objectives add __level dummy
+scoreboard objectives add __curse_level dummy
 scoreboard objectives add __time_alive minecraft.custom:time_since_death
 # used to track a players change in curse level
 scoreboard objectives add __prev_level dummy
@@ -19,9 +19,9 @@ scoreboard objectives add __intro trigger
 # used to mark introduced players
 scoreboard objectives add __introduced dummy
 # trigger to give the player a death curse book
-scoreboard objectives add __give_book trigger
+scoreboard objectives add __book trigger
 # trigger for sending curse level message
-scoreboard objectives add __curse_level trigger
+scoreboard objectives add __level trigger
 # keeps track of how many times the player has been given a death curse book
 scoreboard objectives add __n_books dummy
 
@@ -117,9 +117,6 @@ scoreboard objectives add __eaten_cookie minecraft.used:minecraft.cookie
 scoreboard objectives add __curse_cookie1_effect dummy
 scoreboard objectives add __curse_cookie2_effect dummy
 scoreboard objectives add __curse_cookie3_effect dummy
-scoreboard objectives add __curse_cookie1_effect_end dummy
-scoreboard objectives add __curse_cookie2_effect_end dummy
-scoreboard objectives add __curse_cookie3_effect_end dummy
 
 # player holding resurrection abomination detection
 scoreboard objectives add __holding_res_abom1 dummy

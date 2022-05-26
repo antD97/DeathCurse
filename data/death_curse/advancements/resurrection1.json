@@ -1,0 +1,14 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:beetroot_soup",
+            "nbt": "{CustomModelData:379306,Enchantments:[{}]}"
+        },
+        "title": "Edward...",
+        "description": "Complete a Resurrection Ritual"
+    },
+    "criteria": {
+        "none": { "trigger": "impossible" }
+    },
+    "parent": "death_curse:eat_abomination"
+}

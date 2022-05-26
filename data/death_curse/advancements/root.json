@@ -1,0 +1,15 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:beetroot"
+        },
+        "title": [[""],{"text": "The ", "color": "reset"},{"text": "Death Curse","color": "#aa0000"}],
+        "background": "minecraft:textures/block/red_concrete.png",
+        "description": ["",{"text": "Become afflicted by the ","color": "reset"},{"text": "Death Curse", "color": "#aa0000"}]
+    },
+    "show_toast": false,
+    "announce_to_chat": false,
+    "criteria": {
+        "none": { "trigger": "impossible" }
+    }
+}

@@ -5,4 +5,4 @@
 schedule function __:timer/1h 3600s
 
 # randomizes the executor's effect offsets
-execute as @a[scores={__level=1..}] run function __:player/randomize_effect_offsets
+execute as @a run function __:player/randomize_effect_offsets
