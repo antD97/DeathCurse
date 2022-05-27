@@ -9,7 +9,7 @@ life to be increasingly *unstable*. Enjoy.
 Death Curse is a Minecraft datapack that applies a curse to players that respawn. For every respawn,
 the curse worsens. Some of the features require particles to be enabled so be sure to turn them on!
 I've made the in-game guide book intentionally vague so that you can have fun learning the
-mechanics. If you'd like more details on all the mechanics, see below.
+mechanics. If you'd like more details, see below.
 
 There is also a complimentary resource pack for the datapack. It is not required, but it improves
 the experience by adding textures for custom items and adds one unique sound effect.
@@ -179,19 +179,19 @@ follows:
 - Curse Cookie II: -3 curse levels
 - Curse Cookie III: -11 curse levels
 
-If a player eats a Curse Cookie multiples times within the 30 minutes of its effect, the effect
-timer is only reset each time. If a player eats a higher tier Curse Cookie while under the effect of
-a lower tier Curse Cookie, the reduction effect is replaced by the higher tier Curse Cookie and the
-effect timer is reset. Players cannot eat more Curse Cookies to achieve higher amounts of curse
-reduction.
+Players cannot eat more Curse Cookies to achieve higher amounts of curse reduction. If a player eats
+a Curse Cookie multiple times within the 30 minutes of its effect, the effect timer is only reset
+each time. If a player eats a higher tier Curse Cookie while under the effect of a lower tier Curse
+Cookie, the reduction effect is replaced by the higher tier Curse Cookie and the effect timer is
+reset.
 
 ## Curse Wards
 
 ![Curse Ward Crafting](img/curse_ward.png)
 
 There are three Curse Ward tiers: Curse Ward I, Curse Ward II, and Curse Ward III. To craft a Curse
-Ward I, use the recipe above. Curse Wards don't despawn after being on the ground for five minutes,
-are immune to fire and lava, but are *not* immune to explosions.
+Ward I, use the recipe above. Curse Wards don't despawn after being on the ground for five minutes
+and are immune to fire and lava but are *not* immune to explosions.
 
 Creating higher tiers of Curse Wards is similar to creating higher tiers of Curse Cookies, but the
 thrown items will only be used to create a new Curse Ward if they are on fire. If there are four or
@@ -205,14 +205,18 @@ The amount of levels reduced is as follows:
 - Curse Ward II: -3 curse levels
 - Curse Ward III: -11 curse levels
 
+Having multiple Curse Wards in a player's inventory stacks the wards' curse level reduction effects.
+For example, if a player had two Curse Ward I and one Curse Ward II in their inventory, they would
+have a total of 5 levels of curse reduction.
+
 ## Resurrection Abominations
 
 ![Resurrection Abomination Crafting](img/resurrection_abomination.png)
 
 There are three Resurrection Abominations tiers: Resurrection Abomination I, Resurrection
 Abomination II, and Resurrection Abomination III. To craft a Resurrection Abomination I, use the
-recipe above. Resurrection Abomination don't despawn after being on the ground for five minutes, are
-immune to fire and lava, but are *not* immune to explosions.
+recipe above. Resurrection Abomination don't despawn after being on the ground for five minutes and are
+immune to fire and lava but are *not* immune to explosions.
 
 Creating higher tiers of Curse Abominations is identical to Curse Wards, but have an additional
 requirement of being formed in the Nether.
@@ -233,7 +237,9 @@ the player will be struck with lightning until dead and will respawn with the de
 applied. It is likely that the lightning will destroy any items in the player's inventory, so it is
 recommended to empty your inventory before the final resurrection event.
 
-If a player disconnects during the final event, the event will resume next midnight.
+Eating multiple Resurrection Abominations before the ritual has completed or failed does **not**
+affect the outcome of the ritual and doing so will only waste the items. If a player disconnects
+during the final event, the event will restart next midnight.
 
 # Player Triggers
 

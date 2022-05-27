@@ -55,9 +55,65 @@ execute as @a[scores={__jitter_effect=1}] run function __:player/jitter
     execute positioned as @s rotated as @s if score global __result1 matches 3 run tp @s ~ ~ ~ ~ ~-0.2
 }
 
-# strike with lightning
+# strike with lightning only at midnight
 # didn't end up using different strike levels, but the option is there
-execute as @a[scores={__strike=1..,__time_alive=1..}] run execute positioned as @s run summon minecraft:lightning_bolt
-execute as @e[type=minecraft:skeleton,scores={__strike=1..}] run execute positioned as @s run summon minecraft:lightning_bolt
-execute as @e[type=minecraft:wither_skeleton,scores={__strike=1..}] run execute positioned as @s run summon minecraft:lightning_bolt
-execute as @e[type=minecraft:ghast,scores={__strike=1..}] run execute positioned as @s run summon minecraft:lightning_bolt
+execute store result score global __result1 run time query daytime
+execute if score global __result1 matches 18000 as @a[scores={__strike=1..,__time_alive=1..}] run execute positioned as @s run summon minecraft:lightning_bolt
+execute store result score global __result1 run time query daytime
+execute if score global __result1 matches 18000 as @e[type=minecraft:skeleton,scores={__strike=1..}] run execute positioned as @s run summon minecraft:lightning_bolt
+execute store result score global __result1 run time query daytime
+execute if score global __result1 matches 18000 as @e[type=minecraft:wither_skeleton,scores={__strike=1..}] run execute positioned as @s run summon minecraft:lightning_bolt
+execute store result score global __result1 run time query daytime
+execute if score global __result1 matches 18000 as @e[type=minecraft:ghast,scores={__strike=1..}] run execute positioned as @s run summon minecraft:lightning_bolt
+
+# remove event mobs
+#!find=type=marker,tag=__player_lock
+#!replace=type=marker,tag=__player_lock|type=skeleton,tag=__res_event|type=wither_skeleton,tag=__res_event|type=ghast,tag=__res_event
+execute as @e[type=marker,tag=__player_lock] run function __:kill_if_no_match
+{
+    # store player id
+    #!sb global __arg1 = @s __id
+
+    # 0 if player not found, 1 if player found
+    #!sb global __result1 = 0
+
+    # find the player with the id that matches __arg1 and increment __result1
+    execute as @a run execute if score @s __id = global __arg1 run scoreboard players add global __result1 1
+
+    # if player matching id not found (__result1 == 0) kill
+    execute if score global __result1 matches 0 run kill @s
+}
+
+# __result 1 = -1 if midnight otherwise it's 0+
+execute store result score global __result1 run time query daytime
+execute if score global __result1 matches 18000 run scoreboard players set global __result1 -1
+
+# clear event effects
+execute if score global __result1 matches 0.. as @a[scores={__res_abom_effect1=2..}] run function __:2t/clear_event1
+{
+    scoreboard players set @s __res_abom_effect1 1
+    effect clear @s slow_falling
+    effect clear @s levitation
+    effect clear @s resistance
+    scoreboard players set @s __strike 0
+    scoreboard players set @s __smoke 0
+}
+execute if score global __result1 matches 0.. as @a[scores={__res_abom_effect2=2..}] run function __:2t/clear_event2
+{
+    scoreboard players set @s __res_abom_effect2 1
+    effect clear @s slow_falling
+    effect clear @s levitation
+    effect clear @s resistance
+    scoreboard players set @s __strike 0
+    scoreboard players set @s __smoke 0
+}
+execute if score global __result1 matches 0.. as @a[scores={__res_abom_effect3=2..}] run function __:2t/clear_event3
+{
+    scoreboard players set @s __res_abom_effect3 1
+    effect clear @s slow_falling
+    effect clear @s levitation
+    effect clear @s resistance
+    effect clear @s invisibility
+    scoreboard players set @s __strike 0
+    scoreboard players set @s __smoke 0
+}

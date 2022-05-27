@@ -126,9 +126,15 @@ execute if score global __arg1 matches 1 as @s[scores={__deaths=9}] run function
     title @s subtitle {"text":"+\u2665 -fear","color":"#062921"}
     playsound minecraft:ui.toast.challenge_complete ambient @s ~ ~10000 ~ 100000000 0.55 1
 }
-execute if score global __arg1 matches 1 as @s[scores={__deaths=10..}] run function __:player/d_title/10
+execute if score global __arg1 matches 1 as @s[scores={__deaths=10}] run function __:player/d_title/10
 {
     title @s title {"text":"Death Curse X","color":"#000000"}
+    title @s subtitle [[""],{"text":"no cha","color":"#000000"},{"text":"n","color":"#000000","obfuscated":true},{"text":"ge","color":"#000000"}]
+    playsound minecraft:ui.toast.challenge_complete ambient @s ~ ~10000 ~ 100000000 0.5 1
+}
+execute if score global __arg1 matches 1 as @s[scores={__deaths=11..}] run function __:player/d_title/11
+{
+    title @s title [[""],{"text":"Death Curse ","color":"#000000"},{"text": "X","color": "#000000","obfuscated": true}]
     title @s subtitle [[""],{"text":"no cha","color":"#000000"},{"text":"n","color":"#000000","obfuscated":true},{"text":"ge","color":"#000000"}]
     playsound minecraft:ui.toast.challenge_complete ambient @s ~ ~10000 ~ 100000000 0.5 1
 }
