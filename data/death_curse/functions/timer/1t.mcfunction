@@ -4,109 +4,50 @@
 # 1t (0.05s) timer
 schedule function __:timer/1t 1t
 
+# ------------------------------------------- Players -------------------------------------------- #
+
+# __result1 set to 1 if any player is under any res. abom. effect
+#!sb global __result1 = 0
+execute as @a run function __:timer/1t/all_players
+
 # execute at midnight
-execute store result score global __result1 run time query daytime
-execute if score global __result1 matches 18000..18010 run function __:timer/1t/midnight
+execute store result score global __temp1 run time query daytime
+execute if score global __temp1 matches 17990..18000 run function __:timer/1t/midnight
 {
-    # store if somenoone ate a res. abom. in global __result2
-    #!sb global __result2 = 0
-    #!find=__res_abom_effect1
-    #!replace=__res_abom_effect1|__res_abom_effect2|__res_abom_effect3
-    execute if entity @a[scores={__res_abom_effect1=1..}] run scoreboard players set global __result2 1
-
     # if there is nobody with res. abom. effect, resume day cycle
-    execute if score global __result2 matches 0 run gamerule doDaylightCycle true
+    execute if score global __result1 matches 0 run gamerule doDaylightCycle true
 
-    # if there is somebody with res. abom. effect...
-    execute if score global __result2 matches 1 run function __:timer/1t/resurrection_event
+    # if there is somebody with res. abom. effect, lock on midnight
+    execute if score global __result1 matches 1 run function __:timer/1t/midnight/freeze
     {
-        time set 18000
         gamerule doDaylightCycle false
+
+        #!sb global __temp2 = 18000
+        #!sb global __temp2 -= global __temp1
+
+        # add 1 until daytime is 18000t exactly. needs to be done this way because `time set` changes day count
+        execute if score global __temp1 matches ..17999 run function __:timer/1t/midnight/freeze/add_until_midnight
+        {
+            time add 1t
+            execute store result score global __temp1 run time query daytime
+            execute if score global __temp1 matches ..17999 run function __:timer/1t/midnight/freeze/add_until_midnight
+        }
     }
 }
 
+# --------------------------------- Resurrection Event Entities ---------------------------------- #
+
 # player locking markers
-execute as @e[type=marker,tag=__player_lock] run function __:timer/1t/lock_players
+execute as @e[type=marker,tag=__res_event] run function __:timer/1t/lock_players
 {
-    #!sb global __arg1 = @s __id
-    execute positioned as @s as @a run execute rotated as @s if score @s __id = global __arg1 run tp ~ ~ ~
-    execute if score @s __result1 matches 1 positioned as @s run tp ~ ~0.02 ~
+    #!sb global __temp1 = @s __id
+    execute at @s as @a run execute rotated as @s if score @s __id = global __temp1 run tp ~ ~ ~
+    
+    # __result1 used as a move up flag
+    execute if score @s __result1 matches 1 at @s run tp ~ ~0.02 ~
 }
 
-# move resurrection event mobs up
+# move resurrection event mobs up (__result1 used as a move up flag)
 #!find=skeleton
 #!replace=skeleton|wither_skeleton|ghast
 execute as @e[type=skeleton,tag=__res_event,scores={__result1=1}] run execute at @s run tp ~ ~0.02 ~
-
-execute as @a[scores={__time_alive=0}] run function __:player/while_dead
-{
-    # clear effects
-    #!sb @s __cloaking_end = -100
-    #!sb @s __fatigue2_end = -100
-    #!sb @s __fatigue3_end = -100
-    #!sb @s __mob_aggression_end = -100
-    #!sb @s __feared_end = -100
-    #!sb @s __curse_cookie1_effect = -100
-    #!sb @s __curse_cookie2_effect = -100
-    #!sb @s __curse_cookie3_effect = -100
-    #!sb @s __strike = 0
-
-    #!find=effect1
-    #!replace=effect1|effect2|effect3
-    execute if score @s __res_abom_effect1 matches 1.. run function __:player/clear_event_mobs
-    {
-        #!sb global __arg1 = @s __id
-        #!find=skeleton
-        #!replace=skeleton|wither_skeleton|ghast
-        execute as @e[type=minecraft:skeleton,tag=__res_event] run execute if score @s __id = global __arg1 run function __:player/resurrection1_failed/kill_invis
-    }
-
-    execute if score @s __res_abom_effect1 matches 36.. run function __:player/decrease_death1
-    {
-        # reset res. abom. effect
-        #!sb @s __res_abom_effect1 = 0
-        # remove 1+1 deaths
-        #!sb @s __deaths -= 2
-        # mark for death decrease effect on respawn
-        #!sb @s __deaths_decrease1 = 2
-
-        # advancement
-        advancement grant @s only death_curse:resurrection1
-    }
-
-    execute if score @s __res_abom_effect2 matches 36.. run function __:player/decrease_death2
-    {
-        # reset res. abom. effect
-        #!sb @s __res_abom_effect2 = 0
-        # remove 3+1 deaths
-        #!sb @s __deaths -= 4
-        # don't allow negative deaths
-        execute as @s[scores={__deaths=..0}] run scoreboard players set @s __deaths 0
-        # mark for death decrease effect on respawn
-        #!sb @s __deaths_decrease2 = 2
-        
-        # advancement
-        advancement grant @s only death_curse:resurrection1
-        advancement grant @s only death_curse:resurrection2
-    }
-
-    execute if score @s __res_abom_effect3 matches 36.. run function __:player/decrease_death3
-    {
-        # reset res. abom. effect
-        #!sb @s __res_abom_effect3 = 0
-        # remove 11+1 deaths
-        #!sb @s __deaths -= 12
-        # don't allow negative deaths
-        execute as @s[scores={__deaths=..0}] run scoreboard players set @s __deaths 0
-        # mark for death decrease effect on respawn
-        #!sb @s __deaths_decrease3 = 2
-
-        # advancement
-        advancement grant @s only death_curse:resurrection1
-        advancement grant @s only death_curse:resurrection3
-    }
-
-    # remove matching player lock marker
-    #!sb global __arg1 = @s __id
-    execute as @e[type=marker,tag=__player_lock] run execute if score @s __id = global __arg1 run kill @s
-}

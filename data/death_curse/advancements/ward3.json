@@ -14,7 +14,6 @@
             "conditions": {
                 "items": [
                     {
-                        "count": 1,
                         "items": ["minecraft:enchanted_book"],
                         "nbt": "{display:{Name:'{\"text\":\"Curse Ward III\",\"color\":\"#000000\",\"bold\":true,\"italic\":true}',Lore:['{\"text\":\"-11 Death Curse Levels\"}']},CustomModelData:379302}"
                     }

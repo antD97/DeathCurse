@@ -13,7 +13,6 @@
             "conditions": {
                 "items": [
                     {
-                        "count": 1,
                         "items": ["minecraft:cookie"],
                         "nbt": "{display:{Name:'{\"text\":\"Curse Cookie II\",\"color\":\"#440000\",\"bold\":true,\"italic\":true}',Lore:['{\"text\":\"-3 Death Curse Levels for 30m\"}']},CustomModelData:379304}"
                     }

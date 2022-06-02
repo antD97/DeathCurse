@@ -13,7 +13,6 @@
             "conditions": {
                 "items": [
                     {
-                        "count": 1,
                         "items": ["minecraft:beetroot_soup"],
                         "nbt": "{display:{Name:'[{\"text\":\"Resurr\",\"color\":\"#AA0000\",\"bold\":true,\"italic\":true},{\"text\":\"e\",\"color\":\"#AA0000\",\"bold\":true,\"italic\":true,\"obfuscated\":true},{\"text\":\"ction Abomination \",\"color\":\"#AA0000\",\"bold\":true,\"italic\":true},{\"text\":\"I\",\"color\":\"#AA0000\",\"bold\":true,\"italic\":true,\"obfuscated\":true}]',Lore:['{\"text\":\"-1 Death\"}']},CustomModelData:379306,Enchantments:[{}]}"
                     }

@@ -4,20 +4,20 @@
 # 10t (0.5s) timer
 schedule function __:timer/10t 10t
 
-# run function curse_title for any player who just died
-execute as @a[scores={__time_alive=1..10}] run function __:player/on_death
+execute as @a run function __:timer/10t/all_players
 
-# intro trigger
-execute as @a[scores={__intro=1..}] run function __:player/intro
-#!sb enable @a __intro
-#!sb @a __intro = 0
+# remove event mobs with no match
+#!find=skeleton
+#!replace=skeleton|wither_skeleton|ghast|marker
+execute as @e[type=skeleton,tag=__res_event] run function __:timer/10t/all_event_mobs/kill_if_no_match
+{
+    # store player id
+    #!sb global __temp1 = @s __id
 
-# give death book trigger
-execute as @a[scores={__book=1..}] run function __:player/give_book
-#!sb enable @a __book
-#!sb @a __book = 0
+    # 0 if player not found, 1 if player found
+    #!sb global __result1 = 0
+    execute as @a run execute if score @s __id = global __temp1 run scoreboard players set global __result1 1
 
-# curse level trigger
-execute as @a[scores={__level=1..}] run function __:player/curse_level
-#!sb enable @a __level
-#!sb @a __level = 0
+    # if player matching id not found (__result1 = 0) kill
+    execute if score global __result1 matches 0 run function __:util/kill_invis
+}
