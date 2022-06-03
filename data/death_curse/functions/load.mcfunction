@@ -38,6 +38,8 @@ scoreboard objectives add __deaths_decrease1 dummy
 scoreboard objectives add __deaths_decrease2 dummy
 scoreboard objectives add __deaths_decrease3 dummy
 
+scoreboard objectives add __hostile dummy
+
 # --- curse effects --- #
 
 # cd timers
