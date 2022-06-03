@@ -29,58 +29,58 @@ this project from source:
 # Curse Levels
 
 ## Death Curse I
-Description: <span style="text-decoration: underline">nausea</span>  
+Description: **nausea**  
 Effects:
-- <span style="text-decoration: underline">every 45s(±5s): 4s nausea</span>
-- <span style="text-decoration: underline">every 2m(±10s): 5s nausea</span>
+- **every 45s(±5s): 4s nausea**
+- **every 2m(±10s): 5s nausea**
 
 ## Death Curse II
-Description: nausea, <span style="text-decoration: underline">fatigue</span>  
+Description: nausea, **fatigue**  
 Effects:
-- <span style="text-decoration: underline">-1 max hp</span>
+- **-1 max hp**
 - every 45s(±5s): 4s nausea
 - every 2m(±10s):
-  - <span style="text-decoration: underline">50%: 5s nausea</span>
-  - <span style="text-decoration: underline">50%: 6s nausea, 5s mining fatigue, & 5s slowness</span>
+  - **50%: 5s nausea**
+  - **50%: 6s nausea, 5s mining fatigue, & 5s slowness**
 
 ## Death Curse III
-Description: nausea, fatigue, <span style="text-decoration: underline">curse leak</span>  
+Description: nausea, fatigue, **curse leak**  
 Effects:
 - -1 max hp
 - every 45s(±5s): 4s nausea
 - every 2m(±10s):
   - 50%: 5s nausea
   - 50%: 6s nausea, 5s mining fatigue, & 5s slowness
-- <span style="text-decoration: underline">every 5m(±20s): 1 hostile mob within 30 blocks of the player will be cloaked for 20m (max 1 at a time)</span>
+- **every 5m(±20s): 1 hostile mob within 30 blocks of the player will be cloaked for 20m (max 1 at a time)**
 
 ## Death Curse IV
-Description: <span style="text-decoration: underline">heavy nausea</span>, <span style="text-decoration: underline">heavy fatigue</span>, curse leak  
+Description: **heavy nausea**, **heavy fatigue**, curse leak  
 Effects:
-- <span style="text-decoration: underline">-2 max hp</span>
-- <span style="text-decoration: underline">every 30s(±5s):</span> 4s nausea
-- <span style="text-decoration: underline">every 1m40s(±10s):</span>
+- **-2 max hp**
+- **every 30s(±5s):** 4s nausea
+- **every 1m40s(±10s):**
   - 50%: 5s nausea
-  - 50%: 6s nausea, <span style="text-decoration: underline">5s weakness</span>, 5s <span style="text-decoration: underline">mining fatigue II</span>, & 5s slowness
+  - 50%: 6s nausea, **5s weakness**, 5s **mining fatigue II**, & 5s slowness
 - every 5m(±20s): 1 hostile mob within 30 blocks of the player will be cloaked for 20m (max 1 at a time)
 
 ## Death Curse V
-Description: heavy nausea, heavy fatigue, curse leak, <span style="text-decoration: underline">poison</span>  
+Description: heavy nausea, heavy fatigue, curse leak, **poison**  
 Effects:
 - -2 max hp
 - every 30s(±5s): 4s nausea
 - every 1m40s(±10s):
   - 50%: 5s nausea
   - 50%: 6s nausea, 5s weakness, 5s mining fatigue II, & 5s slowness
-- <span style="text-decoration: underline">every 3m(±15s):</span>
-  - <span style="text-decoration: underline">75%: 2s poison (1/2♥)</span>
-  - <span style="text-decoration: underline">25%: 3s poison (1♥)</span>
-  - <span style="text-decoration: underline">poison will only decrease health to 3♥ at most</span>
+- **every 3m(±15s):**
+  - **75%: 2s poison (1/2♥)**
+  - **25%: 3s poison (1♥)**
+  - **poison will only decrease health to 3♥ at most**
 - every 5m(±20s): 1 hostile mob within 30 blocks of the player will be cloaked for 20m (max 1 at a time)
 
 ## Death Curse VI
-Description: heavy nausea, heavy fatigue, <span style="text-decoration: underline">heavy curse leak</span>, poison  
+Description: heavy nausea, heavy fatigue, **heavy curse leak**, poison  
 Effects:
-- <span style="text-decoration: underline">-3 max hp</span>
+- **-3 max hp**
 - every 30s(±5s): 4s nausea
 - every 1m40s(±10s):
   - 50%: 5s nausea
@@ -89,17 +89,17 @@ Effects:
   - 75%: 2s poison (1/2♥)
   - 25%: 3s poison (1♥)
   - poison will only decrease health to 3♥ at most
-- every 5m(±20s): 1 hostile mob within 30 blocks of the player will be cloaked <span style="text-decoration: underline">and silenced</span> for 20m <span style="text-decoration: underline">(max 3 at a time)</span>
+- every 5m(±20s): 1 hostile mob within 30 blocks of the player will be cloaked **and silenced** for 20m **(max 3 at a time)**
 
 ## Death Curse VII
-Description: heavy nausea, <span style="text-decoration: underline">intense fatigue</span>, heavy curse leak, poison  
+Description: heavy nausea, **intense fatigue**, heavy curse leak, poison  
 Effects:
 - -3 max hp
 - every 30s(±5s): 4s nausea
 - every 1m40s(±10s):
   - 50%: 5s nausea
-  - <span style="text-decoration: underline">25%:</span> 6s nausea, 5s weakness, 5s mining fatigue II, & 5s slowness
-  - <span style="text-decoration: underline">25%: 7s nausea, 5s weakness, 5s mining fatigue II, 5s slowness II, 3s blindness, & +10s hunger X (~1.5🍗) (hunger is not applied if current food is 3🍗 or less)</span>
+  - **25%:** 6s nausea, 5s weakness, 5s mining fatigue II, & 5s slowness
+  - **25%: 7s nausea, 5s weakness, 5s mining fatigue II, 5s slowness II, 3s blindness, & +10s hunger X (~1.5🍗) (hunger is not applied if current food is 3🍗 or less)**
 - every 3m(±15s):
   - 75%: 2s poison (1/2♥)
   - 25%: 3s poison (1♥)
@@ -107,22 +107,22 @@ Effects:
 - every 5m(±20s): 1 hostile mob within 30 blocks of the player will be cloaked and silenced for 20m (max 3 at a time)
 
 ## Death Curse VIII
-Description: heavy nausea, intense fatigue, heavy curse leak, <span style="text-decoration: underline">heavy poison</span>  
+Description: heavy nausea, intense fatigue, heavy curse leak, **heavy poison**  
 Effects:
-- <span style="text-decoration: underline">-4 max hp</span>
+- **-4 max hp**
 - every 30s(±5s): 4s nausea
 - every 1m40s(±10s):
   - 50%: 5s nausea
   - 25%: 6s nausea, 5s weakness, 5s mining fatigue II, & 5s slowness
   - 25%: 7s nausea, 5s weakness, 5s mining fatigue II, 5s slowness II, 3s blindness, & 10s hunger X (~1.5🍗) (hunger is not applied if current food is 3🍗 or less)
 - every 3m(±15s):
-  - <span style="text-decoration: underline">75%: 3s poison (1♥)</span>
-  - <span style="text-decoration: underline">25%: 4s poison (1 1/2♥)</span>
-  - <span style="text-decoration: underline">poison will only decrease health to 2 1/2♥ at most</span>
+  - **75%: 3s poison (1♥)**
+  - **25%: 4s poison (1 1/2♥)**
+  - **poison will only decrease health to 2 1/2♥ at most**
 - every 5m(±20s): 1 hostile mob within 30 blocks of the player will be cloaked and silenced for 20m (max 3 at a time)
 
 ## Death Curse XI
-Description: heavy nausea, intense fatigue, heavy curse leak, heavy poison, <span style="text-decoration: underline">mob aggression</span>  
+Description: heavy nausea, intense fatigue, heavy curse leak, heavy poison, **mob aggression**  
 Effects:
 - -4 max hp
 - every 30s(±5s): 4s nausea
@@ -136,12 +136,12 @@ Effects:
   - poison will only decrease health to 2 1/2♥ at most
 - every 5m(±20s):
   - 1 hostile mob within 30 blocks of the player will be cloaked and silenced for 20m (max 3 at a time)
-  - <span style="text-decoration: underline">for 1m: hostile mobs within 5 blocks of the player are buffed with 5s regeneration, 5s fire resist, & 5s speed</span>
+  - **for 1m: hostile mobs within 5 blocks of the player are buffed with 5s regeneration, 5s fire resist, & 5s speed**
 
 ## Death Curse X+
-Description: heavy nausea, intense fatigue, heavy curse leak, heavy poison, mob aggression, <span style="text-decoration: underline">fear</span>  
+Description: heavy nausea, intense fatigue, heavy curse leak, heavy poison, mob aggression, **fear**  
 Effects:
-- <span style="text-decoration: underline">-5 max hp</span>
+- **-5 max hp**
 - every 30s(±5s): 4s nausea
 - every 1m40s(±10s):
   - 50%: 5s nausea
@@ -154,7 +154,7 @@ Effects:
 - every 5m(±20s):
   - 1 hostile mob within 30 blocks of the player will be cloaked and silenced for 20m (max 3 at a time)
   - for 1m: hostile mobs within 5 blocks of the player are buffed with 5s regeneration, 5s fire resist, & 5s speed
-- <span style="text-decoration: underline">3+ hostile mobs within 5 blocks: 5s slowness, 5s blindness, & 5s weakness</span>
+- **3+ hostile mobs within 5 blocks: 5s slowness, 5s blindness, & 5s weakness**
 
 # Curse Relief
 
