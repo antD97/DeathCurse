@@ -16,9 +16,13 @@ execute as @e[type=item,scores={__time_alive=2..,__result1=4..},nbt={Item:{id:"m
 
 # ------------------------------------------- Players -------------------------------------------- #
 
+execute as @a run function __:timer/10s/all_players
+
 # __result1 set to 1 if any player is under any res. abom. effect
 #!sb global __result1 = 0
-execute as @a run function __:timer/10s/all_players
+#!find=__res_abom_effect1
+#!replace=__res_abom_effect1|__res_abom_effect2|__res_abom_effect3
+execute if entity @a[scores={__res_abom_effect1=1..}] run scoreboard players set global __result1 1
 
 # if between sunset & midnight and someone ate a res. abom., make it thunder
 execute store result score global __temp1 run time query daytime

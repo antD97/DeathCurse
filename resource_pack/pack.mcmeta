@@ -1,6 +1,6 @@
 {
     "pack": {
-        "pack_format": 8,
+        "pack_format": 9,
         "description": [[""],{"text":"Resource pack for the ","color":"reset"},{"text":"Death Curse","color":"#aa0000"},{"text":" data pack","color":"reset"}]
     }
 }

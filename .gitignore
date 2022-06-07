@@ -1,3 +1,5 @@
+releases/
+
 # temporary excel files
 ~*.xlsx
 # temporary audacity files

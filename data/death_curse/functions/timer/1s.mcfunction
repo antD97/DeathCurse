@@ -11,9 +11,13 @@ schedule function __:timer/1s 1s
     #! |cave_spider|enderman|piglin|spider|zombified_piglin
 execute as @e[type=blaze] run function __:timer/1s/all_hostiles
 
+execute as @a run function __:timer/1s/all_players
+
 # __result1 set to 1 if any player is under any res. abom. effect
 #!sb global __result1 = 0
-execute as @a run function __:timer/1s/all_players
+#!find=__res_abom_effect1
+#!replace=__res_abom_effect1|__res_abom_effect2|__res_abom_effect3
+execute if entity @a[scores={__res_abom_effect1=1..}] run scoreboard players set global __result1 1
 
 # if someone ate a res. abom...
 execute if score global __result1 matches 1.. run function __:timer/1s/disable_sleep

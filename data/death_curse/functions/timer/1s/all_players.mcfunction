@@ -31,8 +31,3 @@ execute if score global __result1 matches 18000 as @s[scores={__res_abom_effect2
 
 execute store result score global __result1 run time query daytime
 execute if score global __result1 matches 18000 as @s[scores={__res_abom_effect3=1..}] run function __:timer/1s/all_players/resurrection_event3
-
-# store if someone is under a res. abom. effect in global __result1
-#!find=__res_abom_effect1
-#!replace=__res_abom_effect1|__res_abom_effect2|__res_abom_effect3
-execute if entity @s[scores={__res_abom_effect1=1..}] run scoreboard players set global __result1 1
