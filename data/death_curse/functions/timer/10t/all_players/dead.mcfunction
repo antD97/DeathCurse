@@ -3,6 +3,8 @@
 
 # clear effect and make resurrection event changes while the player is dead
 
+scoreboard players set @s[scores={__disable=1}] __deaths 0
+
 # clear effects
 #!sb @s __fatigue1 = 0
 #!sb @s __fatigue2 = 0

@@ -51,7 +51,9 @@ execute if score global __result1 matches 0.. as @a[scores={__res_abom_effect3=2
     effect clear @s slow_falling
     effect clear @s levitation
     effect clear @s resistance
+
     effect clear @s invisibility
+
     scoreboard players set @s __strike 0
     scoreboard players set @s __smoke 0
 }

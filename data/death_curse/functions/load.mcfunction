@@ -5,6 +5,8 @@
 scoreboard objectives add __id dummy
 #!sb global __id += 0
 
+scoreboard objectives add __disable dummy
+
 scoreboard objectives add __deaths deathCount
 scoreboard objectives add __time_alive minecraft.custom:time_since_death
 scoreboard objectives add __hp health
@@ -128,5 +130,3 @@ schedule function __:timer/2t 2t
 schedule function __:timer/10t 10t
 schedule function __:timer/1s 1s
 schedule function __:timer/10s 10s
-
-tellraw @a {"text": "Loaded Death Curse.", "color": "#AA0000"}

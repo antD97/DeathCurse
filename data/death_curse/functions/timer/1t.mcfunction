@@ -4,6 +4,23 @@
 # 1t (0.05s) timer
 schedule function __:timer/1t 1t
 
+# ------------------------------- Kill Creeper Area Effect Cloud --------------------------------- #
+
+# kill clouds
+execute as @e[type=marker,tag=__cloud_killer] run function __:timer/1t/all_cloud_killers
+{
+    execute at @s run kill @e[type=area_effect_cloud,distance=..2]
+    kill @s
+}
+
+# summon cloud killer
+execute as @e[type=creeper] run function __:timer/1t/all_creepers
+{
+    #!find=__cloak
+    #!replace=__cloak|__angry
+    execute as @s[scores={__cloak=1..}] at @s run summon marker ~ ~ ~ {Tags:["__cloud_killer"]}
+}
+
 # ------------------------------------------- Players -------------------------------------------- #
 
 # __result1 set to 1 if any player is under any res. abom. effect

@@ -259,6 +259,12 @@ Gives the player another copy of the Death Curse guide book.
 Removes all scoreboard objectives, scheduled functions, and entities with custom tags. The next time
 the datapack is reloaded, the datapack will run like it did the first time.
 
+`/function death_curse:op/disable_for_player`  
+Used to disable the Death Curse for a specific player.
+
+`/function death_curse:op/enable_for_player`  
+Used to enable the Death Curse for a specific player (default enabled for everyone).
+
 ---
 Copyright © 2022 antD97  
 Licensed under the [MIT License](LICENSE)

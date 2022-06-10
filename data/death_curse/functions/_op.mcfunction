@@ -3,6 +3,16 @@
 
 # this file is for defining functions only
 
+#! __:op/disable_for_player
+{
+    tellraw @s ["",{"text":"Click "},{"text":"[here]","color":"aqua","clickEvent":{"action":"suggest_command","value":"/scoreboard players set <player> death_curse_disable 1"}},{"text":" and change <player> to the name of the player you want to disable the curse for."}]
+}
+
+#! __:op/enable_for_player
+{
+    tellraw @s ["",{"text":"Click "},{"text":"[here]","color":"aqua","clickEvent":{"action":"suggest_command","value":"/scoreboard players set <player> death_curse_disable 0"}},{"text":" and change <player> to the name of the player you want to enable the curse for."}]
+}
+
 # Remove all scoreboard objectives and clear all scheduled functions
 #! __:op/clear_all
 {

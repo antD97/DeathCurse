@@ -21,6 +21,7 @@
     data modify entity @s ArmorItems set value []
     data modify entity @s HandItems set value []
     data modify entity @s Silent set value 1b
+
     effect give @s invisibility 5 0 true
     kill @s
 }
