@@ -14,7 +14,7 @@ execute store result score global __temp1 run data get entity @s Fire
 
 # save in nether to global __temp2
 #!sb global __temp2 = 0
-execute if predicate __:in_nether run scoreboard players set global __temp2 1
+execute at @s run execute if predicate __:in_nether run scoreboard players set global __temp2 1
 
 # increment time alive if on fire
 execute if score global __temp1 matches 1.. run scoreboard players add @s __time_alive 1
