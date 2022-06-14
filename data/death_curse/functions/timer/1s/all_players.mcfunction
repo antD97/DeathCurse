@@ -31,3 +31,18 @@ execute if score global __result1 matches 18000 as @s[scores={__res_abom_effect2
 
 execute store result score global __result1 run time query daytime
 execute if score global __result1 matches 18000 as @s[scores={__res_abom_effect3=1..}] run function __:timer/1s/all_players/resurrection_event3
+
+# ------------------- return from end dimension max health attribute reset fix ------------------- #
+
+# set the max health attribute
+execute if score @s __curse_level matches ..1 run attribute @s generic.max_health base set 20
+execute if score @s __curse_level matches 2..3 run attribute @s generic.max_health base set 18
+execute if score @s __curse_level matches 4..5 run attribute @s generic.max_health base set 16
+execute if score @s __curse_level matches 6..7 run attribute @s generic.max_health base set 14
+execute if score @s __curse_level matches 8..9 run attribute @s generic.max_health base set 12
+execute if score @s __curse_level matches 10.. run attribute @s generic.max_health base set 10
+
+# fixes hidden hp when reducing max hp
+execute store result score global __temp1 run attribute @s generic.max_health get
+#!sb global __temp1 -= @s __hp
+execute if score global __temp1 matches ..-1 run effect give @s instant_health
