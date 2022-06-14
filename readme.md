@@ -162,50 +162,49 @@ Effects:
 
 ![Curse Cookie Crafting](img/curse_cookie.png)
 
-There are three Curse Cookie tiers: Curse Cookie I, Curse Cookie II, and Curse Cookie III. To craft
+There are three curse cookie tiers: Curse Cookie I, Curse Cookie II, and Curse Cookie III. To craft
 a Curse Cookie I, use the recipe above.
 
 To create a Curse Cookie II, throw four or more Curse Cookie I in a group on the ground. After 10-20
 seconds, for every four Curse Cookie I a new Curse Cookie II will be created and the four Curse
-Cookie I used to create it will be destroyed. The Curse Cookies must be together as a single item
+Cookie I used to create it will be destroyed. The curse cookies must be together as a single item
 stack entity for the merge to work. Curse Cookie III can be created in the same way, but instead
 requires four Curse Cookie II to create one.
 
-Eating a
-Curse Cookie will reduce the player's curse level for 30 minutes. The amount of levels reduced is as
-follows:
+Eating a curse cookie will reduce the player's curse level for 30 minutes. The amount of levels
+reduced is as follows:
 
 - Curse Cookie I: -1 curse level
 - Curse Cookie II: -3 curse levels
 - Curse Cookie III: -11 curse levels
 
-Players cannot eat more Curse Cookies to achieve higher amounts of curse reduction. If a player eats
-a Curse Cookie multiple times within the 30 minutes of its effect, the effect timer is only reset
-each time. If a player eats a higher tier Curse Cookie while under the effect of a lower tier Curse
-Cookie, the reduction effect is replaced by the higher tier Curse Cookie and the effect timer is
+Players cannot eat more curse cookies to achieve higher amounts of curse reduction. If a player eats
+a curse cookie multiple times within the 30 minutes of its effect, the effect timer is only reset
+each time. If a player eats a higher tier curse cookie while under the effect of a lower tier curse
+cookie, the reduction effect is replaced by the higher tier curse cookie and the effect timer is
 reset.
 
 ## Curse Wards
 
 ![Curse Ward Crafting](img/curse_ward.png)
 
-There are three Curse Ward tiers: Curse Ward I, Curse Ward II, and Curse Ward III. To craft a Curse
-Ward I, use the recipe above. Curse Wards don't despawn after being on the ground for five minutes
+There are three curse ward tiers: Curse Ward I, Curse Ward II, and Curse Ward III. To craft a Curse
+Ward I, use the recipe above. Curse wards don't despawn after being on the ground for five minutes
 and are immune to fire and lava but are *not* immune to explosions.
 
-Creating higher tiers of Curse Wards is similar to creating higher tiers of Curse Cookies, but the
-thrown items will only be used to create a new Curse Ward if they are on fire. If there are four or
-more Curse Ward thrown items that are on fire within one block of each other, after 10-20 seconds,
-they will be destroyed and a new higher tier Curse Ward will be created.
+Creating higher tiers of curse wards is similar to creating higher tiers of curse cookies, but the
+thrown items will only be used to create a new curse ward if they are on fire. If there are four or
+more curse ward thrown items that are on fire within one block of each other, after 10-20 seconds,
+they will be destroyed and a new higher tier curse ward will be created.
 
-Curse Wards will reduce a player's curse level simply by being anywhere inside a player's inventory.
+Curse wards will reduce a player's curse level simply by being anywhere inside a player's inventory.
 The amount of levels reduced is as follows:
 
 - Curse Ward I: -1 curse level
 - Curse Ward II: -3 curse levels
 - Curse Ward III: -11 curse levels
 
-Having multiple Curse Wards in a player's inventory stacks the wards' curse level reduction effects.
+Having multiple curse wards in a player's inventory stacks the wards' curse level reduction effects.
 For example, if a player had two Curse Ward I and one Curse Ward II in their inventory, they would
 have a total of 5 levels of curse reduction.
 
@@ -213,34 +212,34 @@ have a total of 5 levels of curse reduction.
 
 ![Resurrection Abomination Crafting](img/resurrection_abomination.png)
 
-There are three Resurrection Abominations tiers: Resurrection Abomination I, Resurrection
+There are three resurrection abominations tiers: Resurrection Abomination I, Resurrection
 Abomination II, and Resurrection Abomination III. To craft a Resurrection Abomination I, use the
-recipe above. Resurrection Abomination don't despawn after being on the ground for five minutes and are
-immune to fire and lava but are *not* immune to explosions.
+recipe above. Resurrection abomination don't despawn after being on the ground for five minutes and
+are immune to fire and lava but are *not* immune to explosions.
 
-Creating higher tiers of Curse Abominations is identical to Curse Wards, but have an additional
-requirement of being formed in the Nether.
+Creating higher tiers of resurrection abominations is identical to curse wards, but have an
+additional requirement of being formed in the Nether.
 
-Resurrection Abominations are used to start a resurrection ritual that, once complete, will
+Resurrection abominations are used to start a resurrection ritual that, once complete, will
 permanently reduce a player's death count. The amount of deaths reduced is as follows:
 
 - Resurrection Abomination I: -1 death
 - Resurrection Abomination II: -3 deaths
 - Resurrection Abomination III: -11 deaths
 
-To begin a resurrection ritual, a player must eat a Resurrection Abomination. As long as there is a
+To begin a resurrection ritual, a player must eat a resurrection abomination. As long as there is a
 player who is taking part in a resurrection ritual it will continue to rain and no player will be
 able to sleep. The resurrection ritual is completed at midnight where a short event will take place.
 If a player taking part in a ritual is underneath any blocks, is not in the overworld, or is dead at
-midnight, the ritual will fail and the Resurrection Abomination is lost. At the end of the event,
+midnight, the ritual will fail and the resurrection abomination is lost. At the end of the event,
 the player will be struck with lightning until dead and will respawn with the death reduction
 applied. It is likely that the lightning will destroy any items in the player's inventory, so it is
 recommended to empty your inventory before the final resurrection event.
 
-Players cannot eat more Resurrection Abominations before the ritual has completed to achieve higher
-amounts of curse reduction. If a player eats another Resurrection Abomination before the
-resurrection event, reduction amount will only overwrite the previous Resurrection Abomination
-effect if the Resurrection Abomination is a higher tier, otherwise the item is wasted.
+Players cannot eat more resurrection abominations before the ritual has completed to achieve higher
+amounts of curse reduction. If a player eats another resurrection abomination before the
+resurrection event, reduction amount will only overwrite the previous resurrection abomination
+effect if the resurrection abomination is a higher tier, otherwise the item is wasted.
 
 # Player Triggers
 
