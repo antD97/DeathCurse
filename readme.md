@@ -1,7 +1,5 @@
 # Death Curse
 
-[![GitHub release](https://img.shields.io/github/downloads/antD97/DeathCurse/v1.0/total)](https://github.com/antD97/DeathCurse/releases/tag/v1.0)
-
 Gone are the days of resurrecting for free. Don't you know bringing someone back to life
 comes with a price? It's about time you learn. For every subsequent life you live, you will find
 life to be increasingly *unstable*. Enjoy.
