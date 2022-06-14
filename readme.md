@@ -12,7 +12,9 @@ mechanics. If you'd like more details, see below.
 There is also a complimentary resource pack for the datapack. It is not required, but it improves
 the experience by adding textures for custom items and adds one unique sound effect.
 
-You can find the download for the datapack and resource pack [here](https://github.com/antD97/DeathCurse/releases/tag/v1.0).
+Links:
+- [Downloads](https://github.com/antD97/DeathCurse/releases)
+- [Planet Minecraft](https://www.planetminecraft.com/data-pack/death-curse/)
 
 ## Building
 
