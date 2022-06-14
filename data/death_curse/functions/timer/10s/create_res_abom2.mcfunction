@@ -15,8 +15,8 @@ execute at @s run kill @e[type=item,scores={__time_alive=2..},distance=..1,nbt={
 execute at @s run summon item ~ ~ ~ {Item:{id:"minecraft:beetroot_soup",Count:1,tag:{display:{Name:'[{"text":"Re","color":"#440000","bold":true,"italic":true},{"text":"su","color":"#440000","bold":true,"italic":true,"obfuscated":true},{"text":"rrection Abomina","color":"#440000","bold":true,"italic":true},{"text":"t","color":"#440000","bold":true,"italic":true,"obfuscated":true},{"text":"ion II","color":"#440000","bold":true,"italic":true}]',Lore:['[{"text":"-3 D"},{"text":"e","obfuscated":true},{"text":"aths"}]']},CustomModelData:379307,Enchantments:[{}]}}}
 
 #!20x
-execute at @s run particle minecraft:entity_effect ~ ~0.125 ~ 85 0 0 255 0
-execute at @s run playsound minecraft:entity.elder_guardian.hurt ambient @a
+execute at @s run particle entity_effect ~ ~0.125 ~ 85 0 0 255 0
+execute at @s run playsound entity.elder_guardian.hurt ambient @a
 
 # if there was a resurrection abomination 1 remaining that wanted to create a resurrection abomination 2...
 execute as @e[type=item,scores={__time_alive=2..,__result1=4..},nbt={Item:{id:"minecraft:beetroot_soup",tag:{CustomModelData:379306}}},limit=1] run function __:timer/10s/create_res_abom2/retry
