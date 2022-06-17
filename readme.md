@@ -1,5 +1,8 @@
 # Death Curse
 
+[Downloads](https://github.com/antD97/DeathCurse/releases) |
+[Planet Minecraft](https://www.planetminecraft.com/data-pack/death-curse/)
+
 Gone are the days of resurrecting for free. Don't you know bringing someone back to life
 comes with a price? It's about time you learn. For every subsequent life you live, you will find
 life to be increasingly *unstable*. Enjoy.
@@ -11,10 +14,6 @@ mechanics. If you'd like more details, see below.
 
 There is also a complimentary resource pack for the datapack. It is not required, but it improves
 the experience by adding textures for custom items and adds one unique sound effect.
-
-Links:
-- [Downloads](https://github.com/antD97/DeathCurse/releases)
-- [Planet Minecraft](https://www.planetminecraft.com/data-pack/death-curse/)
 
 ## Building
 
