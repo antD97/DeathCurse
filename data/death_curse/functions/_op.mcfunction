@@ -14,7 +14,7 @@
 }
 
 # Remove all scoreboard objectives and clear all scheduled functions
-#! __:op/clear_all
+#! __:op/uninstall
 {
     # clear all objectives
     scoreboard objectives remove __id

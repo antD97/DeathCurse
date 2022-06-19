@@ -10,7 +10,7 @@
 
     # set player id if not set
     #!sb @s __id += 0
-    execute if score @s __id matches 0 run function __:player/intro/assign_id
+    execute if score @s __id matches 0 run function __:timer/10t/all_players/intro_trigger/assign_id
     {
         # increment id counter & assign an id
         #!sb global __id += 1
