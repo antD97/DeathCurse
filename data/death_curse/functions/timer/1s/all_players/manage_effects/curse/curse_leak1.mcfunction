@@ -35,10 +35,9 @@ execute if score global __result1 matches 0 as @e[type=blaze] run function __:ti
 #!sb global __temp2 = @s __curse_level
 execute if score global __result1 matches 0 as @e[scores={__hostile=1},sort=random,limit=1] run function __:timer/1s/all_players/manage_effects/curse/curse_leak1/cloak1
 {
-    # apply invisibility, resistance, & strength
+    # apply invisibility & resistance
     effect give @s invisibility 1199 0 true
-    effect give @s resistance 1199 0 true
-    effect give @s strength 1199 0 true
+    effect give @s resistance 1199 2 true
 
     # sound
     execute at @s run playsound ambient.nether_wastes.mood ambient @a ~ ~ ~ 1.5
