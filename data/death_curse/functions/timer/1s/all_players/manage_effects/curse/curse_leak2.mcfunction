@@ -32,10 +32,12 @@ execute if score global __result1 matches ..2 as @e[scores={__hostile=1},sort=ra
 {
     # remove cloak 1
     effect clear @s invisibility
+    effect clear @s resistance
     #!sb @s __cloak1_id = 0
 
-    # apply invisibility & silence
+    # apply invisibility, silence, & resistance
     effect give @s invisibility 1199 0 true
+    effect give @s resistance 1199 2 true
     data merge entity @s {Silent:1b}
 
     # sound

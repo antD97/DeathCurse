@@ -34,7 +34,7 @@ execute if score @s __curse_level matches ..-1 run scoreboard players set @s __c
 
 # --- decrease level --- #
 
-execute if score @s __time_alive matches 1.. run execute if score global __result2 matches ..-1 run function __:player/decrease_level
+execute if score @s __time_alive matches 1.. run execute if score global __result2 matches ..-1 run function __:timer/2t/all_players/calc_level/decrease_level
 {
     # lvl   msg                                             reference                                   old
     # 0     You are rejuvenated.                            back no normal
@@ -78,7 +78,7 @@ execute if score @s __time_alive matches 1.. run execute if score global __resul
 
 # --- increase level --- #
 
-execute if score @s __time_alive matches 1.. run execute if score global __result2 matches 1.. run function __:player/increase_level
+execute if score @s __time_alive matches 1.. run execute if score global __result2 matches 1.. run function __:timer/2t/all_players/calc_level/increase_level
 {
     # lvl   msg                                             reference
     # 1     You feel restless.                              +nausea
