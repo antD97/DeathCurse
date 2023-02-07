@@ -1,0 +1,9 @@
+{
+    "sources": [
+        {
+            "type": "directory",
+            "source": "death_curse",
+            "prefix": "death_curse/"
+        }
+    ]
+}
