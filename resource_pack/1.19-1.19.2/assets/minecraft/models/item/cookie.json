@@ -1,0 +1,20 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "minecraft:item/cookie"
+    },
+    "overrides": [
+        {
+            "predicate": { "custom_model_data": 379303 },
+            "model": "death_curse/curse_cookie_1"
+        },
+        {
+            "predicate": { "custom_model_data": 379304 },
+            "model": "death_curse/curse_cookie_2"
+        },
+        {
+            "predicate": { "custom_model_data": 379305 },
+            "model": "death_curse/curse_cookie_3"
+        }
+    ]
+  }
