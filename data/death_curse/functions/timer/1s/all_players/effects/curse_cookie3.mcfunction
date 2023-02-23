@@ -1,4 +1,4 @@
-# Copyright © 2022 antD97
+# Copyright © 2022-2023 antD97
 # Licensed under the MIT License https://antD.mit-license.org/
 
 execute at @s run particle ambient_entity_effect ~ ~ ~ 0 0 0 1 3

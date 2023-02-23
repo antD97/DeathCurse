@@ -280,5 +280,5 @@ Used to disable the Death Curse for a specific player.
 Used to enable the Death Curse for a specific player (default enabled for everyone).
 
 ---
-Copyright © 2022 antD97  
+Copyright © 2022-2023 antD97  
 Licensed under the [MIT License](LICENSE)

@@ -1,4 +1,4 @@
-# Copyright © 2022 antD97
+# Copyright © 2022-2023 antD97
 # Licensed under the MIT License https://antD.mit-license.org/
 
 # cloaks and silences 1 hostile mob (up to 3) within 30 blocks of the executor (be sure to be positioned as the exectuor)
