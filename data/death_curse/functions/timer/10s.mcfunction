@@ -26,9 +26,9 @@ execute if entity @a[scores={__res_abom_effect1=1..}] run scoreboard players set
 
 # if between sunset & midnight and someone ate a res. abom., make it thunder
 execute store result score global __temp1 run time query daytime
-execute if score global __result1 matches 1 run execute if score global __temp1 matches 12001..18005 run weather thunder 0
+execute if score global __result1 matches 1 run execute if score global __temp1 matches 12001..18005 run weather thunder
 
 # if any other time and someone ate a res. abom., make it rain
 #!find=0..12000
 #!replace=0..12000|18006..24000
-execute if score global __result1 matches 1 run execute if score global __temp1 matches 0..12000 run weather rain 0
+execute if score global __result1 matches 1 run execute if score global __temp1 matches 0..12000 run weather rain
