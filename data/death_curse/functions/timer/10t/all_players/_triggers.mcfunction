@@ -53,6 +53,7 @@
 
     tellraw @s[scores={__n_books=256}] ["",{"text":"Congrats!","color":"#aa0000"},{"text":"You've taken "},{"text":"four","italic": true},{"text":" stacks of my books. Now take your cookie and leave me alone!"}]
     execute as @s[scores={__n_books=256}] run function __:item/curse_cookie3
+    execute as @s[scores={__n_books=256..}] run advancement grant @s only __:cookie3_book
 
     tellraw @s[scores={__n_books=257..}] {"text":"Sorry, I'm all out of books."}
 }

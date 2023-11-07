@@ -58,7 +58,7 @@ execute if score @s __res_abom_effect1 matches 36.. run function __:timer/10t/al
     #!sb @s __resurrected1 = 1
 
     # advancement
-    advancement grant @s only __resurrection1
+    advancement grant @s only __:resurrection1
 }
 
 execute if score @s __res_abom_effect2 matches 36.. run function __:timer/10t/all_players/dead/decrease_death2
@@ -71,8 +71,8 @@ execute if score @s __res_abom_effect2 matches 36.. run function __:timer/10t/al
     #!sb @s __resurrected2 = 1
     
     # advancement
-    advancement grant @s only __resurrection1
-    advancement grant @s only __resurrection2
+    advancement grant @s only __:resurrection1
+    advancement grant @s only __:resurrection2
 }
 
 execute if score @s __res_abom_effect3 matches 36.. run function __:timer/10t/all_players/dead/decrease_death3
@@ -85,8 +85,9 @@ execute if score @s __res_abom_effect3 matches 36.. run function __:timer/10t/al
     #!sb @s __resurrected3 = 1
 
     # advancement
-    advancement grant @s only __resurrection1
-    advancement grant @s only __resurrection3
+    advancement grant @s only __:resurrection1
+    advancement grant @s only __:resurrection2
+    advancement grant @s only __:resurrection3
 }
 
 # fail if resurrection event if dead before lightning
