@@ -5,7 +5,7 @@
             "nbt": "{CustomModelData:379302}"
         },
         "title": "An Expensive Accomplishment",
-        "description": {"text": "Obtain a Curse Ward III","color": "purple"},
+        "description": "Obtain a Curse Ward III",
         "frame": "challenge"
     },
     "criteria": {

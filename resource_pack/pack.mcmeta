@@ -1,6 +1,14 @@
 {
-    "pack": {
-        "pack_format": 18,
-        "description": [[""],{"text":"Resource pack for the ","color":"reset"},{"text":"Death Curse","color":"#aa0000"},{"text":" data pack","color":"reset"}]
+  "pack": {
+    "pack_format": 22,
+    "description": {
+      "text": "Resource pack for the ",
+      "extra": [
+        {
+          "text": "Death Curse",
+          "color": "#aa0000"
+        }
+      ]
     }
+  }
 }

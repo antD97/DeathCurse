@@ -1,6 +1,14 @@
 {
-    "pack": {
-        "pack_format": 18,
-        "description": [[""],{"text":"The ","color": "reset"},{"text":"Death Curse","color":"#aa0000"}]
+  "pack": {
+    "pack_format": 26,
+    "description": {
+      "text": "The ",
+      "extra": [
+        {
+          "text": "Death Curse",
+          "color": "#aa0000"
+        }
+      ]
     }
+  }
 }

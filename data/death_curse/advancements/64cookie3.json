@@ -5,7 +5,7 @@
             "nbt": "{CustomModelData:379305,Enchantments:[]}"
         },
         "title": "Cookie Machine",
-        "description": {"text": "Collect a stack of Curse Cookie III","color": "purple"},
+        "description": "Collect a stack of Curse Cookie III",
         "frame": "challenge"
     },
     "criteria": {

@@ -14,7 +14,9 @@ I've made the in-game guide book intentionally vague so that you can have fun le
 mechanics. If you'd like more details, see below.
 
 There is also a complimentary resource pack for the datapack. It is not required, but it improves
-the experience by adding textures for custom items and adds one unique sound effect.
+the experience by adding textures for custom items and adds one unique sound effect. The
+[Eating Animation](https://modrinth.com/mod/eating-animation) mod is know to break many of the
+custom textures.
 
 ## Building
 

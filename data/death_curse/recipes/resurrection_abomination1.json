@@ -1,19 +1,22 @@
 {
-    "type": "crafting_shaped",
-    "pattern": [
-      " X ",
-      "X#X",
-      " X "
-    ],
-    "key": {
-      "X": {
-        "item": "minecraft:beetroot"
-      },
-      "#": {
-        "item": "minecraft:netherite_ingot"
-      }
+  "type": "crafting_shaped",
+  "pattern": [
+    "XOX",
+    "XXX",
+    "X#X"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:beetroot"
     },
-    "result": {
-      "item": "minecraft:knowledge_book"
+    "#": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "O": {
+      "item": "minecraft:nether_star"
     }
+  },
+  "result": {
+    "item": "minecraft:knowledge_book"
   }
+}
