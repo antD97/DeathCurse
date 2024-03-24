@@ -117,6 +117,9 @@
     #!find=marker
     #!replace=marker|skeleton|wither_skeleton|ghast
     kill @e[type=marker,tag=__res_event]
+
+    # revoke all advancements
+    advancement revoke @a from death_curse:root
 }
 
 # prints cd values

@@ -269,7 +269,7 @@ Gives the player another copy of the Death Curse guide book.
 
 # Operator Functions
 
-`/function death_curse:op/clear_all`  
+`/function death_curse:op/uninstall`  
 Removes all scoreboard objectives, scheduled functions, and entities with custom tags. The next time
 the datapack is reloaded, the datapack will run like it did the first time.
 
